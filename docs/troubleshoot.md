@@ -34,7 +34,7 @@
 
 ## "I get a black screen when trying to load some maps"
 
-- You don't have the DLC maps installed. Please refer to the DLC section of our tutorial.
+- You don't have the DLC maps installed. Please refer to the DLC section of our [tutorial](install#i-already-have-the-steam-version--i-dont-have-the-dlc).
 
 ## "My HUD and hitmarkers are desynchronized from the gameplay"
 

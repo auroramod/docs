@@ -32,19 +32,11 @@
 
 ## Unlock everything
 
-- Type `unlockall` in your game console
+- Goto `STATS` in mainmenu
 
-- Hit **Enter** and you should get everything unlocked in the game!
+- Once you edit whatever you want it'll save automatically!
 
 ![](/img/unlockall.png)
-
-## Disable shader cache warning
-
-- Type `disable_shader_caching 1` in your game console
-
-- Hit **Enter** and you shouldn't get any shader cache warnings!
-
-![](/img/disable_shader_caching.png)
 
 ## Field of View
 
@@ -56,7 +48,7 @@ cg_fovScale <decimal number>
 cg_fovMin <number>
 ```
 
-- Reduce your fov as you like!
+- Reduce, Increase your fov as you like!
 
 ## Singleplayer commands
 
