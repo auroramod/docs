@@ -16,7 +16,7 @@ Torrenting copyright protected files might not be legal in your country even if 
 
 ## "I already have the Steam version" / "I don't have the DLC"
 
-    If you already have the steam version, you may install the DLCs using our DLC torrent.
+    If you already have the Steam version, you may install the DLCs using our DLC torrent.
 
 1. Download the DLC torrent [h1_dlc.torrent] (**ADD LINK TO TORENT**)
 

@@ -5,22 +5,13 @@ At the current point in time, the dedicated server can be run on Windows only. (
 
 ### Prerequisites
 
-* The server require an static ip address.
-* The server require port forwarding. A tutorial can be found [here](#port-forwarding).
-* The server require [NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653).
+* The server requires an static ip address.
+* The server requires port forwarding. A tutorial can be found [here](#port-forwarding).
+* The server requires [NET Framework 4.5](https://www.microsoft.com/en-us/download/details.aspx?id=30653).
 
 ### Installation
 
-1. Create a new directory (for example `D:\Server`), this will be used for the server binaries.
-2. Download latest [server files](https://citizeniv.net/files/CitizenIV-Server.zip).
-3. Extract the build into the directory previously created.
-4. Download default resources from [GitHub](https://github.com/citizenfx-reloaded/server-data-beta) and extract them in the server directory.
-5. Change the server settings in the citmp-server.yml file.
-5. Run `CitizenMP.Server.exe`.
-
-## Linux
-
-Not available yet.
+TBA
 
 ## Port forwarding
 
