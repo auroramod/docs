@@ -4,21 +4,20 @@
 
 :::warning
 
-Torrenting may be not legal in your country,
-H1-Mod Staff are not responsible about anything would happen from that side.
+Torrenting copyright protected files might not be legal in your country even if you already own a valid license! We (The H1-Mod Staff and Members) are not responsible for any legal issues, and we highly recommend you to use a fresh install from Steam or the usage of a VPN.
 
 :::
 
-1. Download/Open your torrent client, we recommend using [qBittorrent Windows client](https://www.fosshub.com/qBittorrent.html)
+1. Download/Open your torrent client, we recommend using the [qBittorrent Windows client](https://www.fosshub.com/qBittorrent.html) (**ADD IMAGE HERE FOR CORRECT DOWNLOAD SECTION**)
 
-2. Download and open the torrent file [h1_full_files.torrent](/files/h1_full_files.torrent)
+2. Download and open the torrent file [h1_full_game.torrent] (**ADD LINK HERE**)
 
-3. Select your directory to download the files in it
+3. Once it is open, there will be a dialogue box, where you will be able to specify the saving location. We highly recommend making a separate "Games" folder in order to do this (for example C:\Games) (**ADD IMAGE HERE**)
 
-## Installing H1-Mod client
+## Installing the H1-Mod client
 
-1. Download the latest release from [H1-Mod's Github](https://github.com/h1-mod/h1-mod/releases)
+1. Download the latest release from [H1-Mod's Github](https://github.com/h1-mod/h1-mod/releases) (**IMAGE HERE TOO**)
 
-2. Extract it to your game files directory
+2. Extract the newly downloaded files from the zip/rar into the root of the game directory (see image below for final result) (**ADD IMAGE FOR THIS AS WELL JESUS CHRIST...**)
 
-3. Open H1-Mod.exe and have fun!
+3. After this, you may open H1-Mod.exe and play. In the next page we will cover troubleshooting.
