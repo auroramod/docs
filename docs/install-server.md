@@ -1,8 +1,7 @@
 # Getting Started
 
-A step-by-step guide on setting up a Dedicated Server.
-
-## Windows
+A step-by-step guide on setting up a Dedicated Server for H1-Mod.
+At the current point in time, the dedicated server can be run on Windows only. (Dedicated Server CPU compatibility is undergoing upgrades, as some older Xeon processors have issues with the MWR binary)
 
 ### Prerequisites
 

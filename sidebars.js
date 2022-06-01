@@ -45,9 +45,7 @@ const sidebars = {
       label: '🛠 Support',
       collapsible: false,
       items: [
-        'resource',
 	      'functions',
-        'vehcols',
         'dlc',
       ]
     },
