@@ -14,7 +14,7 @@ Torrenting copyright protected files might not be legal in your country even if 
 
 3. Once it is open, there will be a dialogue box, where you will be able to specify the saving location. We highly recommend making a separate "Games" folder in order to do this (for example C:\Games) (**ADD IMAGE HERE**)
 
-## "I already have the Steam version"
+## "I already have the Steam version" / "I don't have the DLC"
 
     If you already have the steam version, you may install the DLCs using our DLC torrent.
 

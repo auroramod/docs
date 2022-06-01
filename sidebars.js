@@ -37,7 +37,6 @@ const sidebars = {
       collapsible: false,
       items: [
         'install',
-	'troubleshoot',
       ]
     },
     {
@@ -45,8 +44,8 @@ const sidebars = {
       label: '🛠 Support',
       collapsible: false,
       items: [
-	      'functions',
-        'dlc',
+        'troubleshoot',
+        'functions',
       ]
     },
     // {
