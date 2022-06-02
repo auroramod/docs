@@ -20,13 +20,16 @@ Torrenting copyright protected files might not be legal in your country even if 
 
 1. Download the DLC torrent [h1_dlc.torrent] (**ADD LINK TO TORENT**)
 
-2. Extract and place all the DLC files in the root directory of your game. If the dialogue box asks you to merge folders, click "yes to all" (**ADD IMAGE HERE**)
+2. Extract and place all the DLC files in the root directory of your game. If the dialogue box asks you to merge folders, click "yes to all or Replace file in destination" (**ADD IMAGE HERE**)
 
 ## Installing the H1-Mod client
 
 1. Download the latest release from [H1-Mod's Github](https://github.com/h1-mod/h1-mod/releases)
+
 ![](/img/releases.png)
 
-2. Extract the newly downloaded files from the zip/rar into the root of the game directory (see image below for final result) (**ADD IMAGE FOR THIS AS WELL JESUS CHRIST...**)
+2. Extract the newly downloaded files from the zip/rar into the root of the game directory (see image below for final result)
+
+<center><img src="/img/results.png"/></center>
 
 3. After this, you may open H1-Mod.exe and play. 
