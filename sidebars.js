@@ -37,6 +37,7 @@ const sidebars = {
       collapsible: false,
       items: [
         'install',
+        'install-server',
       ]
     },
     {

@@ -8,7 +8,7 @@ Torrenting copyright protected files might not be legal in your country even if 
 
 :::
 
-1. Download/Open your torrent client, we recommend using the [qBittorrent Windows Client](https://www.fosshub.com/qBittorrent.html) (**ADD IMAGE HERE FOR CORRECT DOWNLOAD SECTION**)
+1. Download/Open your torrent client, we recommend using the [qBittorrent Windows Client](https://www.fosshub.com/qBittorrent.html) ![](/img/qbittorrent.png)
 
 2. Download and open the torrent file [h1_full_game.torrent] (**ADD LINK HERE**)
 
@@ -18,9 +18,9 @@ Torrenting copyright protected files might not be legal in your country even if 
 
     If you already have the Steam version, you may install the DLCs using our DLC torrent.
 
-1. Download the DLC torrent [h1_dlc.torrent] (**ADD LINK TO TORENT**)
+1. Download the DLC torrent [h1_dlc.torrent](/files/h1_dlcs.torrent)
 
-2. Extract and place all the DLC files in the root directory of your game. If the dialogue box asks you to merge folders, click "yes to all or Replace file in destination" (**ADD IMAGE HERE**)
+2. Extract and place all the DLC files in the root directory of your game. If the dialogue box asks you to merge folders, click "yes to all or Replace file in destination"
 
 ## Installing the H1-Mod client
 

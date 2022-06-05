@@ -12,7 +12,7 @@
 
 1. Open your torrent client or install the [qBittorrent Windows Client](https://www.fosshub.com/qBittorrent.html)
 
-2. Get the torrent file for the game files [h1_full_files](/files/h1_full_files.torrent)
+2. Get the torrent file for the game files h1_full_files(LINK HERE)
 
 3. Open torrent file and select the install folder you wish to verify. (Point 1 on the image below)
 
