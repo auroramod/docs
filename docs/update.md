@@ -1,7 +1,7 @@
 # How to update H1-Mod
 
-* You should get an message when you open the game says this at image below, Press Yes to it and it should update if there is an update for the game.
+* You should get a message when you open the game that says the same as the image below. Press Yes to update.
 
 ![](/img/updater.png)
 
-* If this message doesn't shows this message all you need is to [reinstall h1-mod](install#installing-the-h1-mod-client)
+* If this message doesn't show, all you need to do is to [reinstall h1-mod](install#installing-the-h1-mod-client)
