@@ -37,7 +37,9 @@ const sidebars = {
       collapsible: false,
       items: [
         'install',
-        'install-server',
+        'update',
+        'h1meaning',
+        'uninstall',
       ]
     },
     {
@@ -47,17 +49,18 @@ const sidebars = {
       items: [
         'troubleshoot',
         'functions',
+        'ingamename',
       ]
     },
-    // {
-    //   type: 'category',
-    //   label: '🔨 Dedicated Server',
-    //   collapsible: false,
-    //   items: [
-    //     'install-server',
-	  //     'migrating',
-    //   ]
-    // },
+    {
+      type: 'category',
+      label: '🔨 Dedicated Server',
+      collapsible: false,
+      items: [
+        'install-server',
+	      'scripting',
+      ]
+    },
   ],
 };
 
