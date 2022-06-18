@@ -61,6 +61,16 @@ const sidebars = {
 	      'scripting',
       ]
     },
+    {
+      type: 'category',
+      label: 'Additional Features',
+      collapsible: false,
+      items: [
+        'antialiasing',
+	      'aimassist',
+        'fullbright',
+      ]
+    },
   ],
 };
 
