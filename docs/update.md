@@ -4,4 +4,4 @@
 
 ![](/img/updater.png)
 
-* If this message doesn't show, all you need to do is to [reinstall h1-mod](install#installing-the-h1-mod-client)
+* If this message doesn't show, all you need to do is to [uninstall H1-Mod](uninstall) and [reinstall H1-Mod](install#installing-the-h1-mod-client).
