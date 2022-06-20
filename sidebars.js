@@ -50,6 +50,7 @@ const sidebars = {
         'troubleshoot',
         'functions',
         'ingamename',
+        'unlockall',
       ]
     },
     {
@@ -63,9 +64,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Additional Features',
+      label: '💣 Additional Features',
       collapsible: false,
       items: [
+        'ranked',
         'antialiasing',
 	      'aimassist',
         'fullbright',
