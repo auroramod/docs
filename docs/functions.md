@@ -1,17 +1,17 @@
 # Commands
 
-## Open In-Game console
+## Open the In-Game console
 
-1. Open your In-Game console via (**~**) to type all commands!
+1. Open your In-Game console via (**~**) to type commands.
 
 ![](/img/keyboard.png)
 
 
-## Changing In-Game name
+## Changing your In-Game name
 
-- Type `name <yourname>` in your game console
+- Type `name <yourname>` in your console.
 
-- Also you can use colors to make your name looks cool!
+- You can use colors to make your name look cool!
 ```
 ^1 Red
 ^2 Green
@@ -20,13 +20,13 @@
 ^5 Cyan
 ^6 Pink
 ^7 White
-^8 Depends on the team colors playing.
+^8 Depends on the team colors while playing.
 ^9 Grey
 ^0 Black
 ^: Rainbow colors
 ```
 
-- Hit **Enter** and you should get your name changed!
+- Hit **Enter** and your name should change.
 
 ![](/img/name.png)
 
