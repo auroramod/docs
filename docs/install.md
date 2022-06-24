@@ -28,8 +28,10 @@ Torrenting copyright protected files might not be legal in your country even if 
 
 ![](/img/releases.png)
 
-2. Extract the newly downloaded files from the zip/rar into the root of the game directory (see image below for final result)
+2. Move the newly downloaded exe into the root of the game directory (see image below for final result)
 
 <center><img src="/img/results.png"/></center>
 
-3. After this, you may open H1-Mod.exe and play. 
+3. Make sure to get in-game and **(PRESS YES TO THE UPDATER)** to download all important files for the client.
+
+4. After this, you may open H1-Mod.exe and play. 
