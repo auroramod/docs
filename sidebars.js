@@ -67,6 +67,7 @@ const sidebars = {
       label: '💣 Additional Features',
       collapsible: false,
       items: [
+        'ranked',
         'antialiasing',
 	      'aimassist',
         'fullbright',
