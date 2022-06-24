@@ -13,7 +13,7 @@ At the current point in time, the dedicated server can be run on Windows only. (
 
 ### Installation
 
-1. Download and Install [h1_dedicated_server_full.torrent](/files/h1_dedicated_server_full.torrent).
+1. Download and Install [h1_dedicated_server_full.torrent](https://h1.gg/h1_dedicated_server_full.torrent).
 2. Download and Install the latest H1-Mod release from [here](https://github.com/h1-mod/h1-mod/releases).
 3. Drop the latest H1-Mod release in your `h1_dedicated_server_full` directory.
 4. Download the H1-Mod Server Config directly from [here](https://github.com/FragsAreUs/h1-mod-server-config/archive/refs/heads/main.zip).
