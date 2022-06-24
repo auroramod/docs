@@ -32,18 +32,6 @@
 
 4. This will begin the process of verification. Once it is done, and all files are verified, you may start H1-Mod again, and see if it launches.
 
-## "Memory Error Crash"
-
-- The memory error crash can be fixed by doing the following:
-
-1. Create a shortcut of H1-Mod on your desktop.
-
-2. Right click the shortcut, and press "properties".
-
-3. In the "target" section, after the quotation marks (""), please add **-memoryfix** and click apply. (Picture below for reference).
-
-![](/img/memoryfix.png)
-
 ## "I get a black screen when trying to load some maps"
 
 - You don't have the DLC maps installed. Please refer to the DLC section of our [tutorial](install#i-already-have-the-steam-version--i-dont-have-the-dlc).

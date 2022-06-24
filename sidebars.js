@@ -48,6 +48,7 @@ const sidebars = {
       collapsible: false,
       items: [
         'troubleshoot',
+        'errors',
         'functions',
         'ingamename',
         'unlockall',
