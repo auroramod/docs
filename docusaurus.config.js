@@ -8,13 +8,15 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'H1-Mod Docs',
   tagline: 'modern warfare remastered',
-  url: 'https://h1.gg',
+  url: 'https://docs.h1.gg',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
   organizationName: 'h1-mod', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
+  deploymentBranch: 'publish',
+  trailingSlash: 'false',
 
   presets: [
     [
