@@ -15,7 +15,7 @@ const config = {
   favicon: 'img/favicon.ico',
   organizationName: 'h1-mod', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
-  deploymentBranch: 'publish',
+  //deploymentBranch: 'publish',
   trailingSlash: 'false',
 
   presets: [
