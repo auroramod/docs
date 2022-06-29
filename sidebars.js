@@ -38,7 +38,6 @@ const sidebars = {
       items: [
         'install',
         'update',
-        'h1meaning',
         'uninstall',
       ]
     },
@@ -52,6 +51,7 @@ const sidebars = {
         'functions',
         'ingamename',
         'unlockall',
+        'languages'
       ]
     },
     {
@@ -60,7 +60,15 @@ const sidebars = {
       collapsible: false,
       items: [
         'install-server',
-	      'scripting',
+        'port-forwarding'
+      ]
+    },
+    {
+      type: 'category',
+      label: '💻 Scripting',
+      collapsible: false,
+      items: [
+        'scripting'
       ]
     },
     {
@@ -71,7 +79,7 @@ const sidebars = {
         'ranked',
         'antialiasing',
 	      'aimassist',
-        'fullbright',
+        'fullbright'
       ]
     },
   ],

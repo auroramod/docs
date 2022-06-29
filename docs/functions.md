@@ -1,49 +1,20 @@
 # Commands
 
-## Open the In-Game console
+## Opening the in-game console
 
-1. Open your In-Game console via (**~**) to type commands.
+1. Open your in-game console via (**~**) to type commands.
 
 ![](/img/keyboard.png)
 
+## Unlock/Stats menu
 
-## Changing your In-Game name
-
-- Type `name <yourname>` in your console.
-
-- You can use colors to make your name look cool!
-```
-^1 Red
-^2 Green
-^3 Yellow
-^4 Blue
-^5 Cyan
-^6 Pink
-^7 White
-^8 Depends on the team colors while playing.
-^9 Grey
-^0 Black
-^: Rainbow colors
-```
-
-- Hit **Enter** and your name should change.
-
-![](/img/name.png)
-
-## Unlock Menu
-
-    Now you can unlock things automatically with just a few clicks!
-
-- Navigate to `STATS` in the main menu
-
-- You will find multiple edit options for the classes. While some are self-explanatory, there are three main settings, with the "stats" containing the level and prestige info.
+- Navigate to `Stats` in the main lobby menu
 
 ![](/img/unlockall.png)
 
 1. Unlock All Items: This unlocks all base game items and all camos (including DLC)
-2. Unlock All Loot: This unlocks all DLC weapons (does not unlock DLC camos. Please see the first point)
-3. Unlock All Classes: this unlocks all prestige-earned additional classes for use.
-
+2. Unlock All Loot: This unlocks all DLC weapons (does not unlock DLC camos)
+3. Unlock All Classes: This unlocks all prestige-earned additional classes for use.
 
 ## Field of View
 
