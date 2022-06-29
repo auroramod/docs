@@ -16,6 +16,6 @@
 
 - The inability to load the necessary files usually happens due to file structure in Steam version and can be fixed by doing the following:
 
-The first option: move all .bik files to /raw/video/ folder, move all .ff files and localization folder ('english' or any other) to /zone/ folder
+The first option: move all .bik files to /raw/video/ folder, move all .ff, .pak files and localization folder ('english' or any other) to /zone/ folder
 
 The second option: put the DLC files directly in the root folder (if all the other .ff files are there). Make sure that /zone and /raw folders are not created.
