@@ -64,8 +64,12 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: ''
-    }
+      label: '💻 Scripting',
+      collapsible: false,
+      items: [
+        'scripting'
+      ]
+    },
     {
       type: 'category',
       label: '💣 Additional Features',
