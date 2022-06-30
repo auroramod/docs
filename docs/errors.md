@@ -1,13 +1,28 @@
 # Errors
 
-## "Memory Error Crash"
+## "Out of memory" error
 
 - The memory error crash can be fixed by doing the following:
 
 1. Create a shortcut of H1-Mod on your desktop.
+2. Right click the shortcut, and press "Properties".
+3. In the "Target" section, after the quotation marks (""), please add **-memoryfix** and click apply. (Picture below for reference). This should generate a valid `players2` folder, and after that, you can remove the memory fix parameter.
 
-2. Right click the shortcut, and press "properties".
+## "MISSING FILE" error
 
-3. In the "target" section, after the quotation marks (""), please add **-memoryfix** and click apply. (Picture below for reference).
+- Install DLCs
 
-![](/img/memoryfix.png)
+- Make sure your language zone folder is valid. The default language is `english`, so this could also be it.
+
+## "Failed to read game binary" error
+
+- Copy the h1-mod.exe into your Modern Warfare Remastered install folder and run it from there.
+
+## "Create2DTexture" error
+
+- Any of the following can fix this issue:
+
+1. Disable shader cache preloading
+2. Update GPU drivers
+3. Free up RAM
+4. Lower your graphics settings

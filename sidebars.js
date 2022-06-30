@@ -38,7 +38,6 @@ const sidebars = {
       items: [
         'install',
         'update',
-        'h1meaning',
         'uninstall',
       ]
     },
@@ -60,9 +59,13 @@ const sidebars = {
       collapsible: false,
       items: [
         'install-server',
-	      'scripting',
+        'port-forwarding'
       ]
     },
+    {
+      type: 'category',
+      label: ''
+    }
     {
       type: 'category',
       label: '💣 Additional Features',
