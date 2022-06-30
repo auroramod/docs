@@ -10,6 +10,11 @@
 
 ## "MISSING FILE" error
 
+- The inability to load the necessary files (`MISSING FILE eng_code_pre_gfx_mp.ff`) usually happens due to file structure in Steam version and can be fixed by doing the following:
+
+1. Move all .bik files to `/raw/video/` folder
+2. Move all .ff, .pak files and localization folder (`english` or any other) to `/zone/` folder
+
 - Install DLCs
 
 - Make sure your language zone folder is valid. The default language is `english`, so this could also be it.
