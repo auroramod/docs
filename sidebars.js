@@ -77,7 +77,7 @@ const sidebars = {
       items: [
         'ranked',
         'antialiasing',
-	      'aimassist',
+        'aimassist',
         'fullbright',
       ]
     },
