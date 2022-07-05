@@ -15,7 +15,7 @@ Modern Warfare Remastered
 │   │   ├── my_other_script
 │   │   │   ├── __init__.lua
 │   │   │   └── script.lua
-└── iw6x.exe
+└── h1-mod.exe
 ```
 
 After you setup your `__init__.lua` entrypoint, you can include other scripts. If you want to include another script (ex: `other_script.lua`), use the `include` function. This function will load the script using H1-Mod's functionality for loading scripts.
