@@ -67,7 +67,10 @@ const sidebars = {
       label: '💻 Scripting',
       collapsible: false,
       items: [
-        'scripting'
+        'scripting',
+        'load-script',
+        'script-syntax',
+        'gsc-reference'
       ]
     },
     {
