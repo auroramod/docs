@@ -70,7 +70,8 @@ const sidebars = {
         'scripting',
         'load-script',
         'script-syntax',
-        'gsc-reference'
+        'gsc-reference',
+        'ui-scripting'
       ]
     },
     {
