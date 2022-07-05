@@ -55,6 +55,6 @@ playerkilled_hook = game:detour("maps/mp/gametypes/_callbacksetup", "codecallbac
 
 This GSC dump may contain symbols that H1-mod does not have named or is not correctly named. Navigating to [the function table](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp) and finding the function_map, method_map, & token_map maps will help you. `CTRL + F` (Find) and search your desired value (ex: `isplayer`) and see if it exists.<br/>
 
-If H1-mod doesn't have the specific symbol you need named, then you'll need to use the `_ID%d` or `_id_%x` prefix.<br/>
+If H1-mod doesn't have the specific symbol you need named, then you'll need to use the `_func_<hex>` or `_meth_<hex>` prefix.<br/>
 
-For example, if H1-mod theroetically didn't have [this symbol](https://github.com/mjkzy/gsc-tool/blob/97abc4f5b1814d64f06fd48d118876106e8a3a39/src/h1/xsk/resolver.cpp#L877), then you'll refer to the '0x1ad' part. This is the hexdecimal key of the value `isplayer`. So, if `isplayer` wasn't defined with a proper name in H1-mod's function/method table, you would call this function as `game:_id_1AD(player)` (or `game:_ID429(player)` depending if the first one doesn't work)<br/>
+For example, if H1-mod theroetically didn't have [this symbol](https://github.com/mjkzy/gsc-tool/blob/97abc4f5b1814d64f06fd48d118876106e8a3a39/src/h1/xsk/resolver.cpp#L877), then you'll refer to the '0x1ad' part. This is the hexdecimal key of the value `isplayer`. So, if `isplayer` wasn't defined with a proper name in H1-mod's function/method table, you would call this function as `game:_func_1AD(player)`

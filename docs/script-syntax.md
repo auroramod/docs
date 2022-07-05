@@ -223,7 +223,7 @@ local player_name = player.name
 player.origin = vector:new()
 ```
 
-There is no complete list of which fields exist. For example, `level.players` is not a field and is a variable. Not every field from GSC is available in LUA and may also have a definition of `_ID%d` (`%d` = decimal) or `_id_%x` (`%x` = hexdecimal), which you can find in the tutorial for finding variable/field IDs later.
+There is no complete list of which fields exist. For example, `level.players` is not a field and is a variable. Not every field from GSC is available in LUA and may also have a definition of `_ID<decimal>` or `_id_<hex>`, which you can find in the tutorial for finding variable/field IDs later.
 
 ## Command execution
 Unlike in GSC, the scripting API allows to execute console commands.
