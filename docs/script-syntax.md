@@ -1,5 +1,6 @@
 # Lua Syntax
 
+Learn the syntax for Lua including basic examples and notes to help you.
 ## Callbacks
 
 Before we show any function examples for syntax examples, you must know what a lambda and a callback is. A lambda is a function that's made when passing the argument. When doing a notify, interval, or timeout event (as shown below later), a function callback that's specified is called.
