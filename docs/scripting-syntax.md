@@ -250,7 +250,9 @@ end, 1000)
 timer:endon(player, "disconnect")
 ```
 
-## Additional Client Features
+## Additional client features
+
+Because there is a custom Lua scripting API, there are some custom stuff that come from us that assist in development and make stuff easier to work with.
 
 ### Calling/hooking GSC functions
 
