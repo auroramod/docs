@@ -285,7 +285,7 @@ game:executecommand("map mp_crash")
 
 ### Player damage/killed callbacks
 
-Callbacks can be added using the `game:onplayerkilled` or `game:onplayedamage` functions from the game object. The only data you can modify from this is the damage. Returning anything other than a number (msut be an integer) will not do anything.
+Callbacks can be added using the `game:onplayerkilled` or `game:onplayerdamage` functions from the game object. The only data you can modify from this is the damage. Returning anything other than a number (msut be an integer) will not do anything.
 ```lua
 game:onplayerdamage(function(_self, inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc)
     damage = 0
@@ -310,7 +310,7 @@ end
 
 ### GSC structs
 
-GSC structs are also supported similarly as the arrays. To get an entity's struct, you can use the `getstruct()` method or access the `.struct` property.
+GSC structs are also supported similarly as the arrays. To get an entity's struct, you can use the `getstruct` method or access the `.struct` property.
 ```lua
 -- option 1
 local level_struct = level:getstruct()
@@ -326,7 +326,7 @@ local grace_period = level.struct.ingraceperiod
 
 HTTP functions can be accessed from the global `http` table.
 
-* `http.request(url[, options[, async]])`: Returns a table, you can replace the request's callbacks (`onprogress`, `onerror`, `onload`) with your own and send the request using the `.send()` method.
+* `http.request(url[, options[, async]])`: Returns a table, you can replace the request's callbacks (`onprogress`, `onerror`, `onload`) with your own and send the request using the `.send` method.
 
   The second parameter is the options table, which should contain two other tables for the headers and parameters for POST requests.
   

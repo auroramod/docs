@@ -100,7 +100,7 @@ end
 playerkilled_hook = game:detour("maps/mp/gametypes/_callbacksetup", "codecallback_playerkilled", playerkilled_stub)
 ```
 
-To disable or enable a detour, the `.disable()` and `.enable()` methods exist.
+To disable or enable a detour, the `.disable` and `.enable` methods exist.
 
 ## Incorrect/missing symbols on H1-Mod
 
