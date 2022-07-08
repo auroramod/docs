@@ -23,11 +23,54 @@ function entity:player_spawned()
     self:scriptcall("maps/mp/_utility", "_ID1659", "specialty_armorvest")
 end
 
-player:onnotify("spawned_player", function()
-    player:player_spawned()
+level:onnotify("connected", function(player)
+    player:onnotify("spawned_player", function()
+        player:player_spawned()
+    end)
 end)
 ```
 (at the time of writing this, `_unsetperk` doesn't contain a token in version v1.0.3. however, on v1.0.4, `_ID1659` should be `_unsetperk`)
+
+### "Include" functions
+
+To "include" functions from files like in GSC, you can use the `game:include(file)` function from the game object.
+```lua
+game:include("maps/mp/_utility")
+
+function entity:player_spawned()
+    -- Included function names are lowercase
+    self:_id1659("specialty_pistoldeath")
+    self:_id1659("specialty_grenadepulldeath")
+    self:_id1659("specialty_armorvest")
+end
+
+level:onnotify("connected", function(player)
+    player:onnotify("spawned_player", function()
+        player:player_spawned()
+    end)
+end)
+```
+
+Or, you could use the `game:getfunctions(file)` function from the game object.
+```lua
+local utility = game:getfunctions("maps/mp/_utility")
+
+function entity:player_spawned()
+    utility._ID1659(self, "specialty_pistoldeath")
+    utility._ID1659(self, "specialty_grenadepulldeath")
+    utility._ID1659(self, "specialty_armorvest")
+end
+
+level:onnotify("connected", function(player)
+    player:onnotify("spawned_player", function()
+        player:player_spawned()
+    end)
+end)
+```
+
+### Functions in variables
+
+Functions in variables, such as structs or arrays, will be automatically converted to a Lua function. The first argument must always be the entity to call the function on.
 
 ## Hooking (detouring) GSC functions
 

@@ -22,22 +22,6 @@ level:onnotify("connected", on_player_connected)
 
 Syntax examples shown as mostly lambdas, while some are seperate-called functions.
 
-## Functions defined with "entity:" prefix
-
-Functions defined with an `entity:` prefix give the function the ability to use the `self` keyword, similar to GSC.
-```lua
--- entity: prefix defined, makes this function only available to be called on entities
-function entity:connected()
-    print("Player " .. self.name .. " connected")
-end
-
-level:onnotify("connected", function(player)
-    player:connected()
-end)
-```
-
-Syntax examples shown are mostly using entity-defined functions. The alternative to not defining the `entity:` prefix would be passing the player through like normal (as shown in [callbacks](#callbacks)).
-
 ## Types
 
 There are only 5 distinct types needed to interact with game's scripting environment. LUA, of course, has more types, but what is meant by this is the following:
@@ -97,7 +81,7 @@ Vehicles, hud elements, or the level are also entites. They can fire events, but
 Entites can fire notify events. The concept was previously known as `notify` and `waittill` in GSC.
 Popular events are the `connected` event fired by the level, or the `spawned_player` event fired by players.
 
-### Event Listening (formerly known as "waittill")
+### Event Listening (waittill)
 
 You can listen to any of these events by calling either `onnotify` or `onnotifyonce` on an entity:
 ```lua
@@ -123,7 +107,7 @@ listener:clear() -- stops listening for the `connected` event
 
 Events can carry arguments. For example, the `connected` event by the level carries the connecting `player` as an argument. You can get these arguments by adding paramters to the callback functions, as seen in the player_connected callback above.
 
-### Firing (formerly known as "notify")
+### Firing (notify)
 
 To fire (or notify) a event, you can call the `notify` function on an entity:
 ```lua
@@ -214,6 +198,22 @@ player:freezecontrols(false)
 
 For a list of all functions, methods, and tokens available in H1-Mod, have a look at the [function, method, and token tables](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp).
 
+### Entity-specific functions
+
+Functions defined with an `entity:` prefix give the function the ability to use the `self` keyword, similar to GSC.
+```lua
+-- entity: prefix defined, makes this function only available to be called on entities
+function entity:connected()
+    print("Player " .. self.name .. " connected")
+end
+
+level:onnotify("connected", function(player)
+    player:connected()
+end)
+```
+
+Syntax examples shown are mostly using entity-defined functions. The alternative to not defining the `entity:` prefix would be passing the player through like normal (as shown in [callbacks](#callbacks)).
+
 ## Fields
 
 Entities do have fields (or properties). They differ for each type of entity. For example, players have fields like `name`, `origin`, or `angles` and hud elements have fields like `x`, `y`, or `alpha`.
@@ -225,14 +225,6 @@ player.origin = vector:new()
 ```
 
 There is no complete list of which fields exist. For example, `level.players` is not a field and is a variable. Not every field from GSC is available in LUA and may also have a definition of `_ID<decimal>` or `_id_<hex>`, which you can find in the tutorial for finding variable/field IDs later.
-
-## Command execution
-Unlike in GSC, the scripting API allows to execute console commands.
-
-You can use the `game:executecommand` function on the game object like this:
-```lua
-game:executecommand("map mp_crash")
-```
 
 ## Noteworthy information
 
@@ -258,6 +250,118 @@ end, 1000)
 timer:endon(player, "disconnect")
 ```
 
-## Calling/hooking GSC functions
+## Additional Client Features
 
-Refer to [GSC Reference](gsc-reference.md) to figure out how to do this.
+### Calling/hooking GSC functions
+
+Refer to [GSC Reference](gsc-reference.md) to figure out how to do this. This also contains including files from GSC and calling function variables.
+
+### Chat notifies
+
+When a player sends a chat, you are able to grab that in Lua. All you need to do is monitor the `say` (or `say_team`) notify. The optional `hidden` parameter is only true when the player's chat message starts with `/`.
+```lua
+level:onnotify("say", function(player, message, hidden)
+    print(player.name .. ": " .. message)
+end)
+```
+
+You can also monitor the notify on a specific player.
+```lua
+level:onnotify("connected", function(player)
+    player:onnotify("say", function(message, hidden)
+        print(player.name .. ": " .. message)
+    end)
+end)
+```
+
+### Command execution
+
+You can use the `game:executecommand` function from the game object like this:
+```lua
+game:executecommand("map mp_crash")
+```
+
+### Player damage/killed callbacks
+
+Callbacks can be added using the `game:onplayerkilled` or `game:onplayedamage` functions from the game object. The only data you can modify from this is the damage. Returning anything other than a number (msut be an integer) will not do anything.
+```lua
+game:onplayerdamage(function(_self, inflictor, attacker, damage, dflags, mod, weapon, point, dir, hitloc)
+    damage = 0
+    return damage
+end)
+
+game:onplayerkilled(function(_self, inflictor, attacker, damage, mod, weapon, dir, hitloc, timeoffset, deathanimduration)
+    print(attacker.name .. " killed " .. _self.name)
+end)
+```
+
+### GSC arrays
+
+GSC arrays are supported and can be accessed similarly to GSC:
+```lua
+local players = game:getentarray("player", "classname")
+for i = 1, #players do
+    local player = players[i]
+    print("Index " .. i .. ": Player is " .. player.name)
+end
+```
+
+### GSC structs
+
+GSC structs are also supported similarly as the arrays. To get an entity's struct, you can use the `getstruct()` method or access the `.struct` property.
+```lua
+-- option 1
+local level_struct = level:getstruct()
+local grace_period = level_struct.ingraceperiod
+
+-- option 2
+local grace_period = level.struct.ingraceperiod
+```
+
+### HTTP
+
+(**WARNING: This feature is only available in v1.0.4)**
+
+HTTP functions can be accessed from the global `http` table.
+
+* `http.request(url[, options[, async]])`: Returns a table, you can replace the request's callbacks (`onprogress`, `onerror`, `onload`) with your own and send the request using the `.send()` method.
+
+  The second parameter is the options table, which should contain two other tables for the headers and parameters for POST requests.
+  
+  The async parameter specifies wheter the request will be executed on the server thread or on a async thread. If you choose to execute it asynchronously then inside the callbacks you must wrap any calls to game functions with `game:ontimeout` in order to call them from the correct thread.
+
+  ```lua
+  local request = http.request("https://example.com", {
+      headers = {
+          ["Content-type"] = "text/html"
+      },
+      parameters = {
+          foo = "bar"
+      }
+  }, true)
+  
+  request.onprogress = function(progress)
+      print(progress)
+  end
+  
+  request.onerror = function(error, code)
+      print(error, code)
+  end
+  
+  -- Request is done
+  request.onload = function(data)
+      print(data)
+      
+      game:ontimeout(function()
+          game:iprintln("Done!")
+      end, 0)
+  end
+   
+  request.send()
+  ```
+* `http.get(url, callback[, async])`: This function is simpler than `http.request` and only takes the url and callback as parameters (and eventually the async parameter).
+  ```lua
+  http.get("https://example.com", function(data)
+      print(data)
+  end, true)
+  ```

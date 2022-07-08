@@ -69,7 +69,7 @@ const sidebars = {
       items: [
         'scripting',
         'load-script',
-        'script-syntax',
+        'scripting-syntax',
         'gsc-reference',
         'ui-scripting'
       ]
