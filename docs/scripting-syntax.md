@@ -310,14 +310,13 @@ end
 
 ### GSC structs
 
-GSC structs are also supported similarly as the arrays. To get an entity's struct, you can use the `getstruct` method or access the `.struct` property.
+GSC structs are also supported similarly as the arrays. To get an entity's struct, you can directly access the property.
 ```lua
--- option 1
-local level_struct = level:getstruct()
-local grace_period = level_struct.ingraceperiod
+-- old way
+local grace_period = level:getstruct().ingraceperiod
 
--- option 2
-local grace_period = level.struct.ingraceperiod
+-- new way
+local grace_period = level.ingraceperiod
 ```
 
 ### HTTP
