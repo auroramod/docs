@@ -25,7 +25,7 @@ There's 3 download options, you can download the `full language directory`, `wit
 
 :::warning
 
-If you have downloaded the game from Steam, you should not have the `zone` folder, we are highly recommend you to use [cleanup.exe](#) to get correct directory structures.
+If you have downloaded the game from Steam, you should not have the `zone` folder, we are highly recommend you to use [MWR Files Cleaner](https://github.com/skkuull/mwr-files-cleaner) to get correct directory structures.
 
 :::
 
