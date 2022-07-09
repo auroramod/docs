@@ -10,7 +10,7 @@
 
 ## "MISSING FILE" error
 
-- The inability to load the necessary files (`MISSING FILE eng_code_pre_gfx_mp.ff`) usually happens due to file structure in Steam version and can be fixed by doing the following:
+- The inability to load the necessary files (`MISSING FILE eng_code_pre_gfx_mp.ff`) usually happens due to file structure in Steam version and can be fixed by using [MWR Files Cleaner](https://github.com/skkuull/mwr-files-cleaner) or doing the following:
 
 1. Move all .bik files to `/raw/video/` folder
 2. Move all .ff, .pak files and localization folder (`english` or any other) to `/zone/` folder
