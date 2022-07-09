@@ -321,8 +321,6 @@ local grace_period = level.ingraceperiod
 
 ### HTTP
 
-(**WARNING: This feature is only available in v1.0.4)**
-
 HTTP functions can be accessed from the global `http` table.
 
 * `http.request(url[, options[, async]])`: Returns a table, you can replace the request's callbacks (`onprogress`, `onerror`, `onload`) with your own and send the request using the `.send` method.

@@ -18,9 +18,9 @@ The `scriptcall` function is usually called on any sort of player entity or the 
 In this example, we are going to be calling `maps/mp/_utility::_unsetPerk` on last stand, martyrdom, and juggernaut perks. This code should be ran in a function that has access to a player variable.
 ```lua
 function entity:player_spawned()
-    self:scriptcall("maps/mp/_utility", "_ID1659", "specialty_pistoldeath")
-    self:scriptcall("maps/mp/_utility", "_ID1659", "specialty_grenadepulldeath")
-    self:scriptcall("maps/mp/_utility", "_ID1659", "specialty_armorvest")
+    self:scriptcall("maps/mp/_utility", "_unsetperk", "specialty_pistoldeath")
+    self:scriptcall("maps/mp/_utility", "_unsetperk", "specialty_grenadepulldeath")
+    self:scriptcall("maps/mp/_utility", "_unsetperk", "specialty_armorvest")
 end
 
 level:onnotify("connected", function(player)
@@ -29,7 +29,6 @@ level:onnotify("connected", function(player)
     end)
 end)
 ```
-(at the time of writing this, `_unsetperk` doesn't contain a token in version v1.0.3. however, on v1.0.4, `_ID1659` should be `_unsetperk`)
 
 ### "Include" functions
 
@@ -39,9 +38,9 @@ game:include("maps/mp/_utility")
 
 function entity:player_spawned()
     -- Included function names are lowercase
-    self:_id1659("specialty_pistoldeath")
-    self:_id1659("specialty_grenadepulldeath")
-    self:_id1659("specialty_armorvest")
+    self:_unsetperk("specialty_pistoldeath")
+    self:_unsetperk("specialty_grenadepulldeath")
+    self:_unsetperk("specialty_armorvest")
 end
 
 level:onnotify("connected", function(player)
@@ -56,9 +55,9 @@ Or, you could use the `game:getfunctions(file)` function from the game object.
 local utility = game:getfunctions("maps/mp/_utility")
 
 function entity:player_spawned()
-    utility._ID1659(self, "specialty_pistoldeath")
-    utility._ID1659(self, "specialty_grenadepulldeath")
-    utility._ID1659(self, "specialty_armorvest")
+    utility._unsetperk(self, "specialty_pistoldeath")
+    utility._unsetperk(self, "specialty_grenadepulldeath")
+    utility._unsetperk(self, "specialty_armorvest")
 end
 
 level:onnotify("connected", function(player)
