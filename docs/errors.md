@@ -6,11 +6,13 @@
 
 1. Create a shortcut of H1-Mod on your desktop.
 2. Right click the shortcut, and press "Properties".
-3. In the "Target" section, after the quotation marks (""), please add **-memoryfix** and click apply. (Picture below for reference). This should generate a valid `players2` folder, and after that, you can remove the memory fix parameter.
+3. In the "Target" section, after the quotation marks (""), please add **-memoryfix** and click apply. 
+![](/img/memoryfix.png)
+This should generate a valid `players2` folder, and after that, you can remove the memory fix parameter.
 
 ## "MISSING FILE" error
 
-- The inability to load the necessary files (`MISSING FILE eng_code_pre_gfx_mp.ff`) usually happens due to file structure in Steam version and can be fixed by doing the following:
+- The inability to load the necessary files (`MISSING FILE eng_code_pre_gfx_mp.ff`) usually happens due to file structure in Steam version and can be fixed by using [MWR Files Cleaner](https://github.com/skkuull/mwr-files-cleaner) or doing the following:
 
 1. Move all .bik files to `/raw/video/` folder
 2. Move all .ff, .pak files and localization folder (`english` or any other) to `/zone/` folder
