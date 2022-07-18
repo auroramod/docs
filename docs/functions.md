@@ -38,6 +38,9 @@ cg_fovscale 1.25
 cg_fovmin <default / unedited>
 ```
 
+## Unlock Singleplayer missions
+
+- Put `mis_cheat 1` in console
 
 ## Singleplayer commands
 
