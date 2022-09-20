@@ -35,3 +35,9 @@ This should generate a valid `players2` folder, and after that, you can remove t
 2. Update GPU drivers
 3. Free up RAM
 4. Lower your graphics settings
+
+
+## "virtualLobby is read only" error
+
+- Install [steam](https://store.steampowered.com/about/)
+
