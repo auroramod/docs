@@ -2,7 +2,7 @@
 
 ## Introduction to Lua scripting
 
-Lua was the scripting language used in place of GSC (the game's scripting language) on the X Labs clients. This was because at the time of IW6x, there was no GSC compiler. On H1-Mod, we adapt this language from the former clients because it is easy to work with provide a API that adds additional features. Although Lua scripting is the alternative language for the game's scripting, it can still communicate with GSC just fine. Alongside that, it adds new features that help you modify the game's stock GSC scripts to make it all the better.
+Lua was the scripting language used in place of GSC (the game's native scripting language) on the XLabs clients. This was because at the time of IW6x, there was no GSC compiler. On H1-Mod, we adapted Lua scripting from those projects because it is easy to work with and it provides a API that adds additional features. Although Lua scripting is the alternative language for the game's scripting, it can still communicate with GSC just fine. Alongside that, it adds new features that help you modify the game's stock GSC scripts to make it all the better.
 
 If you have never used Lua before, [read up here](https://www.lua.org/pil/contents.html) to better understand it. This scripting documentation is based off [IW6x Lua Scripting Documentation](https://github.com/XLabsProject/iw6x-client/wiki/Scripting).
 

@@ -67,10 +67,10 @@ const sidebars = {
       label: '💻 Scripting',
       collapsible: false,
       items: [
-        'scripting',
-        'load-script',
-        'scripting-syntax',
-        'gsc-reference',
+        'lua-scripting',
+        'lua-load-script',
+        'lua-scripting-syntax',
+        'lua-gsc-reference',
         'ui-scripting'
       ]
     },
