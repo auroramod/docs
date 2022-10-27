@@ -1,4 +1,4 @@
-# GSC Syntax
+# GSC syntax
 
 Learn the syntax for GSC including basic examples and notes to help you.
 
@@ -336,7 +336,7 @@ for (i = 0; i < players.size; i++)
 }
 ```
 
-# Wait
+## Wait
 
 GSC is ran on every server frame, and 20 server frames equal to 1 second.
 ```c
@@ -346,7 +346,7 @@ wait 1;     // 20 server frames
 wait (1);   // 20 server frames
 ```
 
-# Switch
+## Switch
 
 Switch cases are useful for checking the case of many possibly values. This is usually recommended if you are have more than 4-5 variables as it may be faster and more organized compared to a `if` statement.
 ```c
@@ -374,6 +374,6 @@ switch (value)
 }
 ```
 
-# notify, endon, waittill
+## notify, endon, waittill
 
 TODO

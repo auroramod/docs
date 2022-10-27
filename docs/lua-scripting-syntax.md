@@ -1,4 +1,4 @@
-# Lua Syntax
+# Lua syntax
 
 Learn the syntax for Lua including basic examples and notes to help you.
 ## Callbacks
