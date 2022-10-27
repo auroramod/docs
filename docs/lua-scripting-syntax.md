@@ -256,7 +256,7 @@ Because there is a custom Lua scripting API, there are some custom stuff that co
 
 ### Calling/hooking GSC functions
 
-Refer to [GSC Reference](gsc-reference.md) to figure out how to do this. This also contains including files from GSC and calling function variables.
+Refer to [GSC references in Lua](lua-gsc-reference.md) to figure out how to do this. This also contains including files from GSC and calling function variables.
 
 ### Chat notifies
 

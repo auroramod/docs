@@ -2,7 +2,7 @@
 
 ## File structure
 
-Scripts for H1-Mod should be placed in `<MWR folder>/h1-mod/scripts/`. You'll need to create a folder for your script and name it whatever you want (ex: `my_basic_script`). After that, the main file called by H1-Mod is named `__init__.lua`, so store your code that should be running first.
+Lua scripts should be placed in `<MWR root folder>/h1-mod/scripts/`. You'll need to create a folder for your script and name it whatever you want (ex: `my_basic_script`). After that, the main file called by H1-Mod is named `__init__.lua`, so store your code that should be running first.
 
 To figure out what your file structure should look like, refer to below:
 ```

@@ -1,19 +1,10 @@
-# Referencing GSC and GSC dump
-
-The [H1 GSC Dump](https://github.com/mjkzy/h1-gsc-dump) is still a work-in-progress that dump that mostly contains disassembled "GSC asm" files, which contains the bytecode for GSC. Some files have decompiled into plain GSC format, but the decompiler currently has a error that needs to be fixed. GSC bytecode is stack based, so it may be a bit confusing at first but it's easy to understand when it comes down to it. If you need help with GSC bytecode, refer to the `#scripting` channel in the Discord and assistance is provided.
-
-(this documentation is based off the [README of H1 GSC Dump](https://github.com/mjkzy/h1-gsc-dump/blob/main/README.md))
-
-## Resources
-
-- [IW6 GSC Dump](https://github.com/mjkzy/iw6-gsc-dump) (provides comments, functions, methods, variables, dev comments, etc.)
-- [gsc-tool fork for H1](https://github.com/mjkzy/gsc-tool-h1/tree/h1-symbols)
+# GSC references in Lua
 
 ## Calling GSC functions
 
-Calling GSC functions from Lua is made easy thanks to fed. To do so, you need to use the GSC dump and figure out what a file may be named and what a function may be named. A function/file may have a `_ID<decimal>` or `_id_<hex>` prefix, which you'll figure out from testing and the GSC dump.
+Calling GSC functions from the Lua scripting is made easy thanks to fed. To do so, you need to use the H1 GSC dump and figure out what the file and function names. If the file/function you are looking for has a `_ID<decimal>` or `_id_<hex>` prefix, this is most likely new code in H1 that isn't found in IW6 (Ghosts) or S1 (Advanced Warfare).
 
-The `scriptcall` function is usually called on any sort of player entity or the level entity. To call on a player, doing `player:scriptcall(file, function, args)` will work. However, if the function you are calling is from the level entity, you would use `game:scriptcall(file, function, args)` from the game object.
+The `scriptcall` function for Lua scripting is usually called on any sort of player entity or the level entity. To call on a player, doing `player:scriptcall(file, function, args)` will work. However, if the function you are calling is from the level entity, you would use `game:scriptcall(file, function, args)` from the game object.
 
 In this example, we are going to be calling `maps/mp/_utility::_unsetPerk` on last stand, martyrdom, and juggernaut perks. This code should be ran in a function that has access to a player variable.
 ```lua
@@ -103,6 +94,6 @@ To disable or enable a detour, the `.disable` and `.enable` methods exist.
 
 ## Incorrect/missing symbols on H1-Mod
 
-This GSC dump may contain symbols that H1-mod may or may not have named or is not correctly named. Navigating to [the function table](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp) and finding the function_map, method_map, & token_map maps will help you. `CTRL + F` (Find) and search your desired value (ex: `isplayer`) and see if it exists.
+This GSC dump may contain symbols that H1-Mod may or may not have named or is not correctly named. Navigating to [the function table](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp) and finding the function_map, method_map, & token_map maps will help you. `CTRL + F` (Find) and search your desired value (ex: `isplayer`) and see if it exists.
 
 If the symbol you are trying to call isn't named, then you have to the `_func_<hex>` or `_meth_<hex>` prefix. For example, if `isplayer` wasn't properly named, then you would refer to the hexdecimal value (`0x1AD`). You would call this function as `game:_func_1AD(player)`.

@@ -1,4 +1,4 @@
-# Lua Scripting
+# Lua scripting
 
 ## Introduction to Lua scripting
 
@@ -29,4 +29,4 @@ level:onnotify("connected", function(player)
 end)
 ```
 
-And after that, you have successfully made a basic Lua script. Refer to [Loading a Lua script](load-script) to learn how to use it. You can also refer to [Lua Syntax](scripting-syntax) on the basics of Lua.
+And after that, you have successfully made a basic Lua script. Refer to [Loading a Lua script](lua-load-script) to learn how to use it. You can also refer to [Lua Syntax](lua-scripting-syntax) on the basics of Lua.
