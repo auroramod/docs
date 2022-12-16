@@ -8,7 +8,7 @@ Before learning about the language and writing it, read up on [how to load a GSC
 
 ## Writing a basic script
 
-In this little tutorial, we are going to write a simple GSC script that will count the amount of spawns on a player and do a bold print only the first time a player spawns.
+In this little tutorial, we are going to write a simple GSC script that will count the amount of spawns on a player and do a print to the console.
 
 ```c
 init()
@@ -39,6 +39,7 @@ on_player_spawned()
         self waittill("spawned_player"); // this notify will run EVERY TIME the player has spawned
 
         self.spawns += 1; // we add 1 to this variable everytime the player spawns
+ 
         print(va("Player %s has spawned %s times!", self.name, self.spawns));
     }
 }
