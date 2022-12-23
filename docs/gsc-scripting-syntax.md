@@ -377,3 +377,169 @@ switch (value)
 ## notify, endon, waittill
 
 TODO
+
+## Custom functions
+
+With H1-mod, we add a variety of custom GSC functions and methods that are unique to the client and can assist in GSC. Below are most of the functions documented for usage.
+
+### Misc
+* `print(message)`
+* `println(message)`: Prints a message to the console.
+* `logprint(message)`: Prints a message to the game log.
+* `toupper(string)`: Converts all of a string to uppercase.
+* `executecommand(command)`: Executes a console command.
+* `replaceFunc(with, what)`: Replaces a script function with another script function.
+    ```c
+    main()
+    {
+        replacefunc(maps\mp\gametypes\_callbacksetup::callbackVoid, ::callbackvoid_override);
+    }
+
+    callbackvoid_override()
+    {
+        print("callback void override was called");
+    }
+    ```
+* `getFunction(filename, name)`: Gets a function from a GSC script.
+    ```c
+    init()
+    {
+        function = getFunction("maps/mp/gametypes/_callbacksetup", "callbackVoid");
+        [[ function ]]();
+    }
+    ```
+* `getFunctionName(function)`: Returns the function's name.
+  
+    ```c
+    init()
+    {
+        function = getFunction("maps/mp/gametypes/_callbacksetup", "callbackVoid");
+        print(getFunctionName(function)); // "maps/mp/gametypes/_callbacksetup::callbackVoid"
+    }
+    ```
+* `say(message)`: Sends a chat message to all players.
+    ```c
+    onPlayerConnected()
+    {
+        while (true)
+        {
+            level waittill("connected", player);
+            say(player.name + " connected!");
+        }
+    }
+    ```
+* `entity tell(message)`: Sends a chat message to a player.
+    ```c
+    onPlayerConnected()
+    {
+        while (true)
+        {
+            level waittill("connected", player);
+            player tell("Welcome back " + player.name + "!");
+        }
+    }
+    ```
+* `va(string, ...)`: Format arguments via a format string.
+    ```c
+    init()
+    {
+        server_owner = "mikey";
+        server_name = "Epic Server";
+        va_string = va("Welcome to %s's %s!", server_owner, server_name);
+        print(va_string); // "Welcome to mikey's Epic Server!"
+    }
+
+### IO
+* `fileExists(path)`: Returns true if the file exists.
+* `writeFile(path, data[, append])`: Creates a file if it doesn't exist and writes/appends text to it.
+* `readFile(path)`: Reads a file.
+* `fileSize(path)`: Returns file size in bytes.
+* `createDirectory(path)`: Creates a directory.
+* `directoryExists(path)`: Returns true if the directory exists.
+* `directoryIsEmpty(path)`: Returns true if the directory is empty.
+* `listFiles(path)`: Returns the list of files in the directory as an array.
+* `copyFolder(source, target)`: Copies a folder.
+* `removeFile(path)`: Deletes a file if it exists.
+
+### JSON
+* `jsonSerialize(variable[, indent])`: Converts GSC variables (such as arrays) into JSON.
+    ```c
+    init()
+    {
+        array = [];
+        array[0] = 1;
+        array[1] = 2;
+        json = jsonSerialize(array, 4);
+
+        print(json);
+
+        /*
+        [
+            2,
+            1
+        ]
+        */
+    }
+    ```
+
+    This function can also be useful to reveal contents of existing arrays such as `game`:
+    ```c
+    init()
+    {
+        print(jsonSerialize(game["round_end"]), 4);
+
+        /*
+        {
+            "draw": 1,
+            "round_draw": 2,
+            "round_win": 3,
+            "round_loss": 4,
+            "victory": 5,
+            "defeat": 6,
+            "halftime": 7,
+            "overtime": 8,
+            "roundend": 9,
+            "intermission": 10,
+            "side_switch": 11,
+            "match_bonus": 12,
+            "tie": 13,
+            "game_end": 14,
+            "spectator": 15,
+        }
+        */
+    }
+    ```
+* `jsonParse(json)`: Converts JSON into a GSC variable.
+    ```c
+    init()
+    {
+        array = jsonParse("[1, 2, 3, 4]");
+        print(array[0] + " " + array[1] + " " + array[2] + " " + array[3]);
+
+        /*
+        1 2 3 4
+        */
+    }
+    ```
+* `jsonPrint(...)`: Prints values as json.
+* `map(...)`: Creates a string-indexed array.
+    ```c
+    init()
+    {
+        array = map("first", 1, "second", 2);
+        print(jsonSerialize(array, 4));
+        /*
+        {
+            "first": 1,
+            "second": 2
+        }
+        */
+    }
+    ```
+
+### Debugging
+* `assert(condition)`:
+* `assertex(condition, error)`: Throws an error if condition is false. 
+
+* `type(variable)`
+* `typeof(variable)`: Returns the name of the type of variable.

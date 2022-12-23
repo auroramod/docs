@@ -1,12 +1,12 @@
 ﻿---
 slug: /
 sidebar_position: 1
-description: Welcome to the new H1-Mod 1.15 Official Documentation!
+description: Welcome to the H1-Mod official documentation!
 ---
 
 # 👋 Welcome
 
-Welcome to the new **H1-Mod official documentation!**
+Welcome to the **H1-Mod official documentation!**
 
 ![](/img/splash.png)
 

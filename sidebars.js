@@ -31,6 +31,7 @@ const sidebars = {
 
   mainSidebar: [
     'about',
+    'changelog',
     {
       type: 'category',
       label: '🎮 Play H1-Mod',
