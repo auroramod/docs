@@ -2,7 +2,10 @@
 
 ## Downloading from Steam
 
-If you own the game on Steam, you can download the language pack needed for the game. To do so, right click on MWR and select `Properties...`, go to the `Language` tab, and select the language you wish to use from the drop-down menu.
+If you own the game on Steam, you can download the language pack needed for the game.
+1. Right click on the MWR game
+2. Select `Properties...`
+3. Go to the `Language` tab, and select the language you wish to use from the drop-down menu.
 
 ## Downloading from MEGA
 
@@ -10,7 +13,7 @@ You can also download your language pack from our files on [MEGA](https://mega.n
 
 :::info
 
-There are 3 download options available. You can download the `Full '<language>' folder`, `<language> but without soundfiles`, or `*language* but only DLC maps`. We recommend downloading the `Full <language> folder` to get the original and best experience without any issues. To download, right click on the folder you want, go to the Download tab, and Download as ZIP.
+There are 3 download options available. You can download the `Full '<language>' folder`, `<language> but without soundfiles`, or `*language* but only DLC maps`. We recommend downloading the full language folder to get the original and best experience without any issues. To download, right click on the folder you want, go to the Download tab, and Download as ZIP.
 
 :::
 
@@ -50,4 +53,4 @@ Once done, verify your language folder looks similar to this.
 <img align="right" src="/img/language-in-game-options.png" />
 
 2. Select your desired language and then restart your game.
-   - If your language button is missing or grayed out, then it isn't installed correctly.
+   - If your language button is missing or grayed out, then the language isn't installed correctly.
