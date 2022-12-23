@@ -51,6 +51,7 @@ const sidebars = {
         'functions',
         'ingamename',
         'unlockall',
+        'languages',
       ]
     },
     {
