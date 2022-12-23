@@ -22,7 +22,7 @@ If you have downloaded the game from Steam, you might not have the `zone` folder
 
 :::
 
-<img align="right" src="/img/language-new-folder-result.png">
+<img align="right" src="/img/language-new-folder-result.png" />
 
 1. Navigate to your MWR game folder and find your `zone` directory. Once there, create a new folder with the language name you are using.
    - French: `french`
@@ -47,7 +47,7 @@ Once done, verify your language folder looks similar to this.
 
 1. Once you are ingame, open the `Options` menu, and then you should see a `Language` button. This will redirect you to a menu that will switch your language.
 
-<img align="right" src="/img/language-in-game-options.png">
+<img align="right" src="/img/language-in-game-options.png" />
 
 2. Select your desired language and then restart your game.
    - If your language button is missing or grayed out, then it isn't installed correctly.
