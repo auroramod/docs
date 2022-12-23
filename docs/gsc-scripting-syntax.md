@@ -450,6 +450,14 @@ With H1-mod, we add a variety of custom GSC functions and methods that are uniqu
     }
 
 ### IO
+:::warning
+
+IO in GSC, by default, is only used when the `fs_game` dvar is applied to a valid directory within the game. When the `fs_game` dvar is defined, IO is locked into that directory and cannot leave that directory.
+
+However, you can opt-in to allow IO in GSC to use your root game directory folder instead. To do so, launch the game with the `-allow_root_io` command line argument. We DO NOT recommend using this flag or enabling it for 3rd-party mods.
+
+:::
+
 * `fileExists(path)`: Returns true if the file exists.
 * `writeFile(path, data[, append])`: Creates a file if it doesn't exist and writes/appends text to it.
 * `readFile(path)`: Reads a file.
