@@ -13,7 +13,11 @@ You can also download your language pack from our files on [MEGA](https://mega.n
 
 :::info
 
-There are 3 download options available. You can download the `Full '<language>' folder`, `<language> but without soundfiles`, or `*language* but only DLC maps`. We recommend downloading the full language folder to get the original and best experience without any issues. To download, right click on the folder you want, go to the Download tab, and Download as ZIP.
+There are 3 download options available. You can download the `Full '<language>' folder`, `<language> but without soundfiles`, or `<language> but only DLC maps`. We recommend downloading the full language folder to get the original and best experience without any issues. 
+
+To download:
+1. Right click on the folder you choose
+2. Go to the `Download` tab, and click `Download as ZIP`.
 
 :::
 
