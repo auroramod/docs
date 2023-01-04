@@ -52,3 +52,11 @@ article .badge.badge--secondary {
   text-transform: uppercase;
   font-size: 90%;
 }
+
+/** Reduce the padding for mobile screen */
+@media (orientation:portrait) {
+  .container,
+  .row .col {
+    padding: 0;
+  }
+}
