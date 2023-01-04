@@ -54,7 +54,7 @@ article .badge.badge--secondary {
 }
 
 /** Reduce the padding for mobile screen */
-@media (orientation:landscape) {
+@media (orientation:portrait) {
   .container,
   .row .col {
     padding: 0;
