@@ -2,7 +2,7 @@
 
 :::warning
 
-**YOU MUST OWN THE BASE GAME TO PLAY H1-Mod**
+**YOU MUST OWN THE BASE GAME IN ORDER TO PLAY H1-Mod**
 
 :::
 
