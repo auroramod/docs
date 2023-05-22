@@ -1,5 +1,11 @@
 # How to install H1-Mod
 
+:::warning
+
+**YOU MUST OWN THE BASE GAME TO PLAY H1-Mod**
+
+:::
+
 ## Installing the H1-Mod client
 
 1. Download the latest release from [H1-Mod's Github](https://github.com/h1-mod/h1-mod/releases)
