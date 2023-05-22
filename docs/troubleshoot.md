@@ -6,20 +6,6 @@
 
 - Please update your GPU and any other outdated drivers.
 
-## Verify game files (Torrent version)
-
-1. Open your torrent client or install the [qBittorrent Windows Client](https://www.fosshub.com/qBittorrent.html)
-
-2. Get the torrent file for the game files [h1_full_files](https://h1.gg/h1_full_files.torrent)
-
-3. Open the torrent file and select the install folder you wish to verify. (Point 1 on the image below)
-
-4. Please make sure to follow point 2 on the image below, and make sure that the drop down matches the image.
-
-![](/img/torrent.png)
-
-4. Press OK, and the torrent client should start checking/verifying the file integrity of your game. Once it is done, if there are any issues, it will replace the missing files. It will have finished the verification when you can see "seeding" on the torrent download section.
-
 ## Verify game files (Steam version)
 
 1. Go to Steam, and navigate to your Call of Duty: Modern Warfare Remastered installation.
