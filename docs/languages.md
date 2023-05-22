@@ -7,20 +7,6 @@ If you own the game on Steam, you can download the language pack needed for the 
 2. Select `Properties...`
 3. Go to the `Choose Language` tab, and select the language you wish to use from the drop-down menu.
 
-## Downloading from MEGA
-
-You can also download your language pack from our files on [MEGA](https://mega.nz/folder/OTBWWAqY#KNyc53z1JPNUUWCS4qVqlQ).
-
-:::info
-
-There are 3 download options available. You can download the `Full '<language>' folder`, `<language> but without soundfiles`, or `<language> but only DLC maps`. We recommend downloading the full language folder to get the original and best experience without any issues. 
-
-To download:
-1. Right click on the folder you choose
-2. Go to the `Download` tab, and click `Download as ZIP`.
-
-:::
-
 ## Installation
 
 :::warning
