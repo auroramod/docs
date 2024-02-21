@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'H1-Mod Docs',
   tagline: 'modern warfare remastered',
-  url: 'https://docs.h1.gg',
+  url: 'https://docs.auroramod.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -57,7 +57,7 @@ const config = {
   	    position: 'left',
           },
           {
-            href: 'https://h1.gg',
+            href: 'https://auroramod.dev',
             label: 'Home',
             position: 'left',
           },
