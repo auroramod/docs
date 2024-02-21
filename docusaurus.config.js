@@ -6,14 +6,14 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'H1-Mod Docs',
+  title: 'Aurora Docs',
   tagline: 'modern warfare remastered',
   url: 'https://docs.auroramod.dev',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'h1-mod', // Usually your GitHub org/user name.
+  organizationName: 'auroramod', // Usually your GitHub org/user name.
   projectName: 'docs', // Usually your repo name.
   //deploymentBranch: 'publish',
   trailingSlash: 'false',
@@ -46,7 +46,7 @@ const config = {
       },
       navbar: {
         logo: {
-          alt: 'H1-Mod Docs',
+          alt: 'Aurora Docs',
           src: 'img/h1-header.png',
         },
         items: [
@@ -62,7 +62,7 @@ const config = {
             position: 'left',
           },
           {
-            href: 'https://github.com/h1-mod',
+            href: 'https://github.com/auroramod',
             label: 'GitHub',
             position: 'left',
           },
@@ -74,12 +74,12 @@ const config = {
       },
       footer: {
         style: 'dark',
-        copyright: `© ${new Date().getFullYear()} - H1-Mod.`,
+        copyright: `© ${new Date().getFullYear()} - Aurora.`,
       },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
-	additionalLanguages: ['lua'],
+	    additionalLanguages: ['lua'],
       },
     }),
 };
