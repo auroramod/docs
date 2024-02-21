@@ -4,9 +4,9 @@ sidebar_position: 1
 description: Welcome to the Aurora official documentation!
 ---
 
-# 👋 Welcome
+# Welcome 👋
 
-Welcome to the **Aurora official documentation!**
+Welcome to the **Aurora** official documentation!
 
 ![](/img/splash.png)
 
