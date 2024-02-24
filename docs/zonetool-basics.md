@@ -1,5 +1,6 @@
-# x64-zt
+# Zonetool Basics
 
+## x64-zt
 x64-zt is a tool for reading/writing assets from & into newer Call of Duty games. You can find the tool on the [official x64-zt GitHub repository](https://github.com/Joelrau/x64-zt).
 
 As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anything listed in the conversion support table below is what is supported. For map porting and for older Call of Duty porting, check [Map Porting](#map-porting).
