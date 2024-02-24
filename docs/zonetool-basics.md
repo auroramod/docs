@@ -4,7 +4,9 @@ x64-zt is a tool for reading/writing assets from & into newer Call of Duty games
 
 As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anything listed in the conversion support table below is what is supported. For map porting and for older Call of Duty porting, check [Map Porting](#map-porting).
 
-⚠️ This documentation has **not** been completely finished. Parts of this process are documented and you may still run into issues.
+:::warning
+This documentation has **not** been completely finished. Parts of this process are documented and you may still run into issues.
+:::
 
 ## Conversion support
 
@@ -19,7 +21,9 @@ As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anythin
 ## Map Porting (IW3-IW4-IW5 -> H1)
 To port maps from IW3, IW4, & IW5, you *need* to use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/h1) on the **h1** branch. Using this version of zonetool will target H1 for asset dumps and is expected to be used with **x64-zt** for building custom H1 assets.
 
-⚠️ Due to lighting changes after IW6, maps before IW6 don't take advantage of H1 lighting. Conversions handle this all for you, but it is up to each map porter to fix their map to the best of their ability
+:::warning
+Due to lighting changes after IW6, maps before IW6 don't take advantage of H1 lighting. Conversions handle this all for you, but it is up to each map porter to fix their map to the best of their ability
+:::
 
 To start the map porting process, you'll need:
 - the [zonetool binary](https://github.com/ZoneTool/zonetool-binaries) for your specific game, which goes in the game files of that game
