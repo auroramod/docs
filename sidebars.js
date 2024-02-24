@@ -58,7 +58,7 @@ const sidebars = {
     {
       type: 'category',
       label: '🔨 Dedicated Server',
-      collapsible: false,
+      collapsible: true,
       items: [
         'install-server',
         'port-forwarding'
@@ -67,7 +67,7 @@ const sidebars = {
     {
       type: 'category',
       label: '💻 Scripting',
-      collapsible: false,
+      collapsible: true,
       items: [
         'gsc-scripting',
         'gsc-load-script',
@@ -78,6 +78,14 @@ const sidebars = {
         'lua-scripting-syntax',
         'lua-gsc-reference',
         'ui-scripting'
+      ]
+    },
+    {
+      type: 'category',
+      label: '👾 Zonetool',
+      collapsible: true,
+      items: [
+        'zonetool-basics'
       ]
     },
     {
