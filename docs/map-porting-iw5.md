@@ -1,9 +1,9 @@
 ## Map Porting (IW3/4/5 -> H1/H2/S1)
+To port maps from IW3, IW4, & IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/h1) on the **h1** branch from GitHub. This version of zonetool will target H1 for asset dumping and is expected to be used with **x64-zt** for building custom H1 assets from disk.
+
 :::warning
 Due to massive lighting changes done from MW3 -> Ghosts, maps ported from games before Ghosts don't take full advantage of H1 technology and may not look the best. For better lightgrid lighting, you can set the dvar `r_lightGridNonCompressed` to **1** before loading into your map.
 :::
-
-To port maps from IW3, IW4, & IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/h1) on the **h1** branch from GitHub. This version of zonetool will target H1 for asset dumping and is expected to be used with **x64-zt** for building custom H1 assets from disk.
 
 To start the map porting process, you'll need:
 - the [zonetool .exe](https://github.com/ZoneTool/zonetool-binaries) for your game, which goes in the game files of that game
@@ -43,3 +43,6 @@ reference example (bad, uses two commas):
 :::
 
 When you dump the zone that contains your desired techset, it should start with **techset_**. After running the `dumpzone <zone>` command, find your desired techset zone folder in your dump folder *(located at `%game files%/dump/`)*, and then put it in `%game files%/zonetool_paths/techsets_mp_bog/`. x64-zt will now look here for techsets before erroring!
+
+### Fullbright lighting on models (odd techsets)
+Some models/foliage on your map may be fullbright and not responding correctly to the lighting. The reasoning may be due to your foliage/model using `mc_ambient_t0c0_nfwpf`. If this is the case, replace it with techset `mc_l_sm_t0c0_nfwpf`. This **should be fixed** on newer ZoneTool versions on Joelrau's fork, however older maps & dumps may have this problem.
