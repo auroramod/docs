@@ -20,7 +20,7 @@ As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anythin
 | **IW7** | ❌ | ❌ | ❌ | ❌ | ✔️ |
 
 ## Map Porting (IW3/4/5 -> H1/H2/S1)
-Learn how to port maps for IW3, IW4, & IW5 to newer gen games [here](map-porting).
+Learn how to port maps for IW3, IW4, & IW5 to newer gen games [here](map-porting-iw5).
 
 ## Map Porting (S1 -> H1)
 There is no documentation to do this at the moment. For S1 or any other game's asset listing, join our Discord and go to #zonetool for the [asset listing message](https://discord.com/channels/945420505157083208/1032511834420420640/1196505669805822103).
