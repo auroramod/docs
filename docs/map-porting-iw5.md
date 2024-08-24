@@ -15,6 +15,18 @@ Once you find the zone you want to dump *(example: mp_bog)*, use the `dumpzone m
 2. move the dumped folder to `%MWR game files%/zonetool/mp_bog/`
 3. open x64-zt, and run `generatecsv <zone>` *(example: `generatecsv mp_bog`)*
 
+### Fixing "Could not find mapped X techset for Y techset"
+:::warning
+Mapping techsets is not a beginner friendly task and requires manual work. Doing so could be time consuming depending if you find proper matches and research the materials in H1 to compare to older game materials.
+:::
+
+To fix this error, you can modify zonetool's Material class in Dumper for H1 to map the techsets listed. Using the [H1 Asset Listing](../static/h1_asset_listing.rar), you can search up techsets that are similar in H1 and map them.
+
+Another way to fix this error is to manually fix the techset used in the material listed, and then using the asset listing above to find materials that may be in H1 with the exact same name or a similar material.
+
+### Fixing "Could not find mapped X sortkey for sortkey: Y"
+Sortkeys are used in materials and must be remapped from older games to H1 or any newer games. A lot of them are mapped, but some are not completely studied. Leaving this error be can be okay in most cases.
+
 ### Older game techsets
 When porting from older games into H1, techsets are remapped to use H1 techsets instead since older games are DX9. Lots of these techsets still exist in one way or another, but it takes some manual work to find them. Luckily, you can download the [H1 Asset Listing](../static/h1_asset_listing.rar) and then use a ZIP extractor to get the zone sources of H1 techsets. A recommended program to navigate these would be [Notepad++](https://notepad-plus-plus.org/downloads/) or [VSCode](https://code.visualstudio.com/).
 
