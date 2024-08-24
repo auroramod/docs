@@ -37,11 +37,14 @@ Before you start finding missing techsets, use `dumpzone <zone name>` for:
 
 These will help you filter out any common techset errors you'll get.
 
-### Singleplayer techset dumping
-Before dumping techsets from singleplayer, you must run the command `loadzone techsets_common`, and then you can use dump your singleplayer techsets zone.
+### SP techset dumping
+Before dumping techsets from singleplayer, you must run the command `loadzone techsets_common`, and then you can use dump your singleplayer techsets zone. 
+
+### SP material limit error
+If you a hit a material limit dumping a singleplayer zone/map, you must modify zonetool to load `code_post_gfx` + `common` instead of `code_post_gfx_mp` + `common_mp`. You can find the [code for common zones here](https://github.com/Joelrau/x64-zt/blob/main/src/zonetool/component/h1/zonetool.cpp#L251).
 
 ### Missing techsets
-To find missing techsets your map needs, try building your zone. When your zone is building, you might recieve a error alongside something to do with "statebit info", "techset", or a very long and weird name. This usually indicates missing techset errors and are easy to resolve.
+To find missing techsets your map needs, try building your zone in x64-zt. When your zone is building, you might recieve a error alongside something to do with "statebit info", "techset", or a very long and weird name. This usually indicates missing techset errors and are easy to resolve.
 
 :::warning
 When going through the asset listing to find your desired techset, you'll need to look for techsets that are **NOT** reference assets. For example:
