@@ -62,3 +62,9 @@ When you dump the zone that contains your desired techset, it should start with 
 
 ### Fullbright/black lighting on models (bad techs used in mats)
 Some models/foliage on your map may be fullbright and not responding correctly to the lighting. The reasoning may be due to your foliage/model using `mc_ambient_t0c0_nfwpf`/`mc_ambient_t0c0_nfwpf_nocast`. If this is the case, replace it with techset `mc_l_sm_t0c0_nfwpf`. This **should be fixed** on newer ZoneTool versions on Joelrau's fork, however older maps & dumps may have this problem.
+
+### Map crashing on H1 with 0x1406B33F4
+This is simply a error that occurs when a bad material is being used. To debug this, from the private match screen, use the map command followed by `debug_materials 1` in your console. This **will tank your FPS** so only use this when needed, aka after a command that's doing something like loading a map. The last material listed before the error occurs is the broken material you have to fix for your map!
+
+Example command: `devmap mp_paris;debug_materials 1`
+
