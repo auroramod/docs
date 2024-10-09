@@ -86,7 +86,8 @@ const sidebars = {
       collapsible: true,
       items: [
         'zonetool-basics',
-        'map-porting-iw5'
+        'map-porting-iw5',
+        'map-porting-s1'
       ]
     },
     {
