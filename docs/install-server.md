@@ -9,7 +9,7 @@ At the current point in time, the dedicated server can be run on Windows only. (
 
 * The server requires a static ip address.
 * The server requires port forwarding. A tutorial can be found [here](port-forwarding).
-* The server requires some redists which can be easily installed via this [Redist Installer](https://git.io/redists)
+* The server requires some redists which can be easily installed via this [Redist Installer](https://chse.dev/redists)
 
 ### Installation
 
