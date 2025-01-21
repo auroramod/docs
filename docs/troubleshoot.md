@@ -2,7 +2,7 @@
 
 ## My game won't open for some reason
 
-- Please download Visual Studio C++ redists using [Chase's Redist Installer](https://github.com/chxseh/Redist-Installer/releases/download/latest/Redist-Installer.bat)
+- Try downloading Visual Studio C++ redists using [Chase's Redist Installer](https://chse.dev/redists)
 
 - Please update your GPU and any other outdated drivers.
 
