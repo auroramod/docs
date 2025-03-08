@@ -2,6 +2,36 @@
 
 This is a list of updates H1-Mod has, and the changes through the updates. New updates will be prompted via a popup in the main menu when you open H1-Mod.
 
+## v2.0.2
+
+### Changes
+- Added `com_waitEndFrameMode` dvar
+- Added `branding` dvar
+- Added `r_reflectionProbeGenerate`
+- Stat & prestige reset no longer crash game
+- tag_weapon hack enabled for Release
+- Server browser shows map name in red text if missing & shows colored ping
+- Fix `Exceeded limit of X localize assets` error (Singleplayer)
+- Fix Depot credits not accumulating in certain gamemodes
+- Fix clients on same network infinite loading into match
+- Fix out of memory error
+- Added sensitivity slider
+- Add line & column errors for GSC errors (`developer_script` must be enabled)
+- & other non-important fixes & changes 😸 
+
+### Changes (Debug)
+- Added `cg_drawMaterial`
+- Added vision & fog editor + asset viewer (Multiplayer, F11 to open)
+- Fix Singleplayer not launching on Debug
+
+## v2.0.1
+
+### Changes
+- Fix gsc
+- Fix UI popups
+- and other small changes
+- Added `sv_discordImageUrl` & `sv_discordImageText` for servers to show off in Discord RPC
+
 ## v2.0.0
 
 ### Changes
