@@ -1,4 +1,4 @@
-# GSC syntax
+# GSC syntax & debugging
 
 Learn the syntax for GSC including basic examples and notes to help you.
 
@@ -374,7 +374,46 @@ switch (value)
 }
 ```
 
-## notify, endon, waittill
+## Events
+
+### notify
+
+A notify event will send a cue to a endon or waittill to do something. When you notify something, it is called like `<entity> notify("my_cool_notify")`.
+
+### endon
+
+Knowing how a notify works, you can end threads you create easily. One of the most common notifies that occur is when a player disconnects from the game, which should be used in any player thread you run.
+
+```c
+my_cool_player_func() // self == player
+{
+    self endon("disconnect");   // ends when player disconnects
+    level endon("game_ended");  // ends when level ends game
+
+    for(;;)
+    {
+        print(va("player %s has %s kills!", self.name, self.kills));
+        wait 5;
+    }
+}
+```
+
+### waittill
+
+A notify can also execute a waittill. A waittill is something that waits for a event to be notified, and then you can execute code off of it. If you run a waittill that isn't in a `for` or `while`, you <b>still need a endon</b> because the thread will never end or cause undefined behavior if so.
+
+```c
+on_player_connect() // self == level
+{
+    level endon("game_ended");  // ends when level ends game
+
+    for(;;)
+    {
+        level waittill("connected", player); // this is called every time a player connects
+        print(va("player %s has connected!", player.name));
+    }
+}
+```
 
 TODO
 
@@ -551,3 +590,73 @@ However, you can opt-in to allow IO in GSC to use your root game directory folde
 
 * `type(variable)`
 * `typeof(variable)`: Returns the name of the type of variable.
+
+## Script errors
+
+GSC is a scripting language that is prone to errors very easily. When undefined behavior occurs, it'll just keep going the best it can. For example, when a variable is undefined but used in a if statement, it'll run the code as if the variable was true. This runtime error below shows the instruction that is failing, and then the function & file.
+
+![runtime error example](/img/runtime_error.png)
+
+For some reason, it's not showing the name & function it's erroring in while I write this up, but the line information is correct and we can break it down from there.
+So using the information, we can conclude the variable at line 50 is undefined.
+
+![runtime error code](/img/runtime_error_code.png)
+
+Stuff like this makes people think their mod is working because they don't get runtime errors normally, but in reality, it's just working by luck. In H1-Mod, we restore a dvar known as `developer_script`. When you set this dvar to <b>1</b>, and start or `map_restart` a game, you will get debug information about the script including runtime errors that'll show errors in your script.
+
+### Opcodes
+
+Some of the opcode instructions that show might be confusing, but they're usually straightforward. Below is a list of very common opcodes and how to fix them. The common theme between all of these is that a variable being checked is undefined, therefore needs a definition somewhere or you need logic to check if `isdefined` before you do stuff with it.
+
+| Opcode    | Reason |
+| -------- | ------- |
+| OP_EvalSelfFieldVariable | Trying to access a field like self.<b>bruh</b> that might be undefined |
+| OP_SetLevelFieldVariableField | Trying to set a field on the <b>level</b> object |
+| OP_CastBool | A variable being casted to bool is undefined |
+| OP_JumpOnFalse | If condition failing, usually commonly a undefined variable. |
+| OP_JumpOnTrue | Same as OP_JumpOnFalse |
+| OP_ScriptMethodThreadCallPointer | Most common reason is the caller is undefined |
+| OP_CallBuiltinMethod | A builtin engine method is failing due to bad parameters |
+| OP_inequality | A `!=` is failing, meaning one or both of the variables might be undefined |
+| OP_equality | A `==` is failing, meaning one or both of the variables might be undefined |
+| OP_greater | A `>` is failing, meaning one or both of the variables might be undefined |
+| OP_greater_equal | A `>=` is failing, meaning one or both of the variables might be undefined |
+| OP_less | A `<` is failing, meaning one or both of the variables might be undefined |
+| OP_less_equal | A `<=` is failing, meaning one or both of the variables might be undefined |
+| OP_inc | A `variable += 1` or `variable++` is failing, meaning the variable is undefined |
+| OP_plus | A `+` is failing, meaning one or both of the variables might be undefined |
+| OP_divide | A `/` is failing, meaning one or both of the variables might be undefined |
+| OP_multiply | A `*` is failing, meaning one or both of the variables might be undefined |
+| OP_GetSelfObject | Self is undefined, this should never happen |
+| OP_SetVariableField | Setting a field on a variable that's not a entity is failing. Variable may be undefined |
+| OP_endon | Variable being used on a `endon` is undefined |
+| OP_notify | Variable being used on a `notify` is undefined |
+| OP_waittill | Variable being used on a `waittill` is undefined |
+| OP_wait | Time for a `wait` is failing, if variable is used probably undefined | 
+| OP_EvalArray | Trying to do variable<b>[index]</b> fails, variable might be undefined |
+| OP_switch | The variable for the switch case table is undefined |
+| OP_size | Doing `variable.size` fails due to variable being undefined |
+| OP_checkclearparams | Too many parameters might be getting passed to the function, or not the required ones |
+| OP_BoolNot | Doing a inverse of variable like `variable = !variable` meaning undefined variable |
+
+### Variable leaks
+
+Variable leaks are when so much undefined behavior is happening that the game starts leaking variables. The GSC VM only has so many variables it can allocate, and for stability on a dedicated server, you must write good code. This can happen for various reasons, including more than just undefined variables. Threads that run `waittill`, `for` loops, or even `while` loops per player <i>or</i> level can <b>easily leak</b> if you are not properly ending them when the game ends, or when exitlevel is called.
+
+The errors that occurs will be something along the lines of "child/parent variables maxed out". For example, this function below shows a function calls by a player that waits until the game is over, and then runs some code.
+
+```c
+waittill_game_end() // self == player
+{
+    //self endon("disconnect"); // let's act like our code doesn't have this
+    level endon("shutdownGame_called"); // absolute last notify to end threads
+
+    level waittill("game_ended");
+
+    print(va("%s has %s kills when game is ended", self.name, self.kills));
+}
+```
+
+This function may look alright, but there are already some issues that can occur. If a player leaves the game, this code <b>will still run.</b> When that happens, the game will cry about "removed entity" errors because the player no longer exists. You now have a variable leak! To fix this, you add a `self endon("disconnect");` so the thread ends when a player leaves.
+
+Each function you create should always include a endon for `game_ended`, or `shutdownGame_called` if you need to end it at the very last second of the match. If it's a player thread, it should always endon `disconnect` for the player entity.
