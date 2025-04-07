@@ -94,6 +94,6 @@ To disable or enable a detour, the `.disable` and `.enable` methods exist.
 
 ## Incorrect/missing symbols on H1-Mod
 
-This GSC dump may contain symbols that H1-Mod may or may not have named or is not correctly named. Navigating to [the function table](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp) and finding the function_map, method_map, & token_map maps will help you. `CTRL + F` (Find) and search your desired value (ex: `isplayer`) and see if it exists.
+This GSC dump may contain symbols that H1-Mod may or may not have named or is not correctly named. Navigating to [the function table](https://github.com/auroramod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp) and finding the function_map, method_map, & token_map maps will help you. `CTRL + F` (Find) and search your desired value (ex: `isplayer`) and see if it exists.
 
 If the symbol you are trying to call isn't named, then you have to the `_func_<hex>` or `_meth_<hex>` prefix. For example, if `isplayer` wasn't properly named, then you would refer to the hexdecimal value (`0x1AD`). You would call this function as `game:_func_1AD(player)`.

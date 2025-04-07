@@ -178,7 +178,7 @@ end, 1000)
 
 The game provides a set of global functions and entity methods. The functions provided are pretty much the same as COD4 had them, or any other game that uses GSC. Since this game is heavily based off IW6 (Ghosts) engine and is very very similar, most of the GSC used in IW6 and S1 (Advanced Warfare) is the same.
 
-You can use a community-made [COD4 Scripting Reference](https://znation.nl/cod4script/) website to find some functions (libcod does not exist in stock GSC nor H1-Mod). Any functions, methods, or tokens should be all lowercase.
+You can use THE community-made [COD4 Scripting Reference](https://znation.nl/cod4script/) website to find some functions (libcod does not exist in stock GSC nor H1-Mod). Any functions, methods, or tokens should be all lowercase.
 
 Global functions are functions that don't need an entity to run. They are called on the `game` object (ex: `game:isplayer(player)`). When referring to the COD4 Scripting Reference, these functions won't have have a `Call this on:` tab.
 
@@ -196,7 +196,7 @@ local player = -- [...]
 player:freezecontrols(false)
 ```
 
-For a list of all functions, methods, and tokens available in H1-Mod, have a look at the [function, method, and token tables](https://github.com/h1-mod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp).
+For a list of all functions, methods, and tokens available in H1-Mod, have a look at the [function, method, and token tables](https://github.com/auroramod/h1-mod/blob/develop/src/client/game/scripting/function_tables.cpp).
 
 ### Entity-specific functions
 
