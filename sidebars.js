@@ -53,6 +53,7 @@ const sidebars = {
         'ingamename',
         'unlockall',
         'languages',
+        'colorcodes',
       ]
     },
     {
