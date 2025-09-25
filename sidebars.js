@@ -88,7 +88,8 @@ const sidebars = {
       items: [
         'zonetool-basics',
         'map-porting-iw5',
-        'map-porting-s1'
+        'map-porting-s1',
+        'map-arena-files'
       ]
     },
     {
