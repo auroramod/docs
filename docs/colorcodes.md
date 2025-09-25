@@ -15,7 +15,7 @@ The color codes for H1-Mod, used by doing `^1` or `^2` in front of text or a nam
 | `^8`       | friendly team color                                 |
 | `^9`       | enemy team color                                    |
 | `^:`       | rainbow color code                                  |
-| `^;`       | facebook blue (can't use it names)                  |
+| `^;`       | facebook blue (can't use in names)                  |
 | `^<`       | sky blue                                            |
 | `^=`       | orange                                              |
 | `^>`       | purple                                              |
