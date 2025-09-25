@@ -40,6 +40,8 @@ material,$levelbriefingcrossfade
 The loadscreen image can be whatever you want, but should be the size of this image below:
 <img src="img/loadscreen.png"></img>
 
+If your image is a PNG and the same resolution, you can use [iwi-converter](https://github.com/bruhhwtf/iwi-converter), which is a simple .exe to drag and drop `.IWI` *(Call of Duty image file)* or `.png` to turn it into its counter opposite. ZoneTool supports building `.png` files, but it's **highly recommended** you convert any important textures that aren't 2D to `.IWI`.
+
 For the loadscren materials **$levelbriefing** and **$levelbriefingcrossfade**, you just simply need to build these in and change the image in the textureTable. These materials are created as json files, and go in `<MWR>/zonetool/<map>_load/materials/`. Your image can go in here, or it can go in `<MWR>/zonetool/images/`.
 
 ```json
