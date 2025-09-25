@@ -2,6 +2,7 @@
 
 In order to get custom maps in map select, you must install maps inside your `<MWR directory>/usermaps/`. Inside `usermaps`, each map folder should lay there.
 
+```
 Call of Duty: Modern Warfare Remastered\
 | - usermaps\
 
@@ -9,16 +10,19 @@ usermaps\
 | - mp_favela\
 | - mp_streamline\
 | - mp_terminal\
+```
 
 ## Usermap folder structure
 
 The structure of a usermap folder should had a map fastfile, a map load fastfile, and a arena file. Some maps might also have a .pak file, which is used for extra assets that are big.
 
+```
 mp_favela\
 | - mp_favela.ff
 | - mp_favela_load.ff
 | - mp_favela.pak
 | - mp_favela.arena
+```
 
 ## Loadscreen
 
