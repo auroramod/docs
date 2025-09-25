@@ -2,6 +2,12 @@
 
 This is a list of updates H1-Mod has, and the changes through the updates. New updates will be prompted via a popup in the main menu when you open H1-Mod.
 
+## v2.0.3
+
+### Changes
+- Fixed custom images
+- Reimplement original color codes & add new ones ([find the color codes here!](colorcodes.md))
+
 ## v2.0.2
 
 ### Changes
