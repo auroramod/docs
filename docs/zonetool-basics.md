@@ -1,13 +1,13 @@
 # Zonetool Basics
 
 :::warning
-This documentation **has not** been completely finished. Parts of this process are not well-documented and you may still run into issues. For further help, you can join our Discord and talk to modders in the community.
+This documentation **has not** been completely finished. Parts of this process are not well documented and you may run into issues. For further help, you can [join our Discord](http://auroramod.dev/discord) and talk to modders in the community.
 :::
 
 ## x64-zt
-x64-zt is a tool for reading/writing assets from & into newer Call of Duty games. You can find the tool at the [official x64-zt GitHub repository](https://github.com/Joelrau/x64-zt).
+x64-zt is a tool for reading/writing fastfile assets for newer Call of Duty games. [You can download the tool here](https://github.com/Joelrau/x64-zt/releases/tag/latest).
 
-As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anything listed in the conversion support table below is what is supported. For map porting and for older Call of Duty porting, check out [Map Porting IW3/4/5](#map-porting-iw345---h1h2s1). For porting to something like AW -> MWR, check out [Map Porting S1](#map-porting-s1---h1).
+This tool is mainly for newer Call of Duty games like Ghosts, Advanced Warfare, Modern Warfare, and Infinite Warfare. Anything listed in the conversion support table below is what is supported.
 
 ## Game conversion support
 
@@ -38,8 +38,11 @@ As far as x64-zt goes, this tool is mainly for newer Call of Duty games. Anythin
 - `skip common`: Skips common zones when dumping a map, can be `true` or `false`. Useful if you already converted source game common files for target game in zonetool_paths.
 - `target game`: The game to convert the assets to.
 
-## Map Porting (IW3/4/5 -> H1)
+## Porting maps (IW3/4/5 -> H1)
 Learn how to port maps for IW3, IW4, & IW5 to newer gen games (S1, H1, & H2) [here](map-porting-iw5).
 
-## Map Porting (S1 -> H1 <- H2)
-Learn how to port maps for S1 to H1 [here](map-porting-s1).
+## Porting maps (S1 -> H1 <- H2)
+Learn how to port maps for newer games like S1 to H1 [here](map-porting-s1).
+
+## Porting assets
+Any other asset that is built into a fastfile in a game like CoD4, MW2, or MW3 will be ported over into the newer desired format. This goes for newer games too. You can port mods already created that have models, sounds, or even scripts and use them in your mods easily.

@@ -89,12 +89,11 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '💣 Additional Features',
+      label: '💣 Extra',
       collapsible: false,
       items: [
-        'ranked',
         'antialiasing',
-        'aimassist',
+        'ds4windows',
         'fullbright',
       ]
     },
