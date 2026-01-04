@@ -1,6 +1,6 @@
-# How to update H1-Mod
+# Updating H1-Mod
 
-You should get a message when you open the game that says the same as the image below. Press Yes to update.
+You should get a message when you open the game that says the same as the image below. Press **Yes** to get the latest update.
 
 ![](/img/updater.png)
 

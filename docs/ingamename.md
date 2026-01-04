@@ -1,8 +1,8 @@
 # Change in-game name
 
-- Type `name <yourname>` in your console.
+Type `name <yourname>` in your console.
 
-- You can use any of the following colors to make your name look cool:
+You can use any of the following colors to make your name look cool:
 ```
 ^1 Red
 ^2 Green

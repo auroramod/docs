@@ -1,6 +1,4 @@
-# GSC scripting
-
-## Introduction to GSC scripting
+# Introduction to GSC
 
 GSC is a derivative of the 'C' programming language, but made easy for doing gameplay-related stuff. If you understand C or C++, then GSC will come familiar to you. And if you don't know know any other programming languages - don't worry! GSC is made to be easy.
 

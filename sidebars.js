@@ -34,7 +34,7 @@ const sidebars = {
     'changelog',
     {
       type: 'category',
-      label: '🎮 Play H1-Mod',
+      label: '🎮 H1-Mod',
       collapsible: false,
       items: [
         'install',
@@ -51,7 +51,6 @@ const sidebars = {
         'errors',
         'functions',
         'ingamename',
-        'unlockall',
         'languages',
         'colorcodes',
       ]
@@ -74,10 +73,6 @@ const sidebars = {
         'gsc-load-script',
         'gsc-scripting-syntax',
         'gsc-dump',
-        'lua-scripting',
-        'lua-load-script',
-        'lua-scripting-syntax',
-        'lua-gsc-reference',
         'ui-scripting'
       ]
     },

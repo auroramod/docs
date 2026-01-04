@@ -1,20 +1,20 @@
-# Commands
+# Go-to Commands
 
-## Opening the in-game console
+## Opening the console
 
-1. Open your in-game console via (**~**) to type commands.
+To open your in-game console, press the  **~** key to type commands. You can also use the external console that is a Command Prompt window.
 
 ![](/img/keyboard.png)
 
 ## Unlock/Stats menu
 
-- Navigate to `Stats` in the main lobby menu
+Navigate to the `Stats` menu in the main lobby.
+
+- Unlock All Items: This unlocks all base game items and all camos (including DLC)
+- Unlock All Loot: This unlocks all DLC weapons (does not unlock DLC camos)
+- Unlock All Classes: This unlocks all prestige-earned additional classes for use.
 
 ![](/img/unlockall.png)
-
-1. Unlock All Items: This unlocks all base game items and all camos (including DLC)
-2. Unlock All Loot: This unlocks all DLC weapons (does not unlock DLC camos)
-3. Unlock All Classes: This unlocks all prestige-earned additional classes for use.
 
 ## Field of View
 
@@ -40,8 +40,8 @@ cg_fovmin <default / unedited>
 
 ## Unlock Singleplayer missions
 
-- Put `mis_cheat 1` in console
+Put `mis_cheat 1` in console
 
 ## Singleplayer commands
 
-- All singleplayer cheats are present and available for use! [CoD4 Cheats List](https://www.liveabout.com/cod-4-cheats-pc-3401820)
+All singleplayer cheats are present and available for use! This list may help you: [CoD4 Cheats List](https://www.liveabout.com/cod-4-cheats-pc-3401820)
