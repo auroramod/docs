@@ -10,11 +10,11 @@ You may need to [Port Forward your server](port-forwarding) for people to see it
 - A text editor **([VSCode](https://code.visualstudio.com/) or [Notepad++](https://notepad-plus-plus.org/downloads/) is recommended)**
 - A valid installation of [Call of Duty®: Infinite Warfare](https://store.steampowered.com/app/292730/Call_of_Duty_Infinite_Warfare/) from Steam
 
-### Setting up your server
-
 :::warning
-The server files have not been optimized and perfected yet. The game does require around ~90GB of space, so be sure to have some storage allocated to setup your server.
+The server files have not been optimized and perfected yet, therefore a standalone server files download is not available. The game files require around **~90GB** of storage, so make sure you have this before setting up your server.
 :::
+
+### Setting up your server
 
 1. Download the [IW7 Dedicated Server Resources](https://github.com/auroramod/iw7-dedi-resources) from GitHub. You can do so by clicking the green `Code` dropdown box, and clicking `Download ZIP` **on the bottom.**
 2. Move the **iw7-mod folder** and the **.bat** files into your Infinite Warfare folder. <img src="https://media.discordapp.net/attachments/803370151453524008/1458032589591023676/image.png?ex=695e2a2a&is=695cd8aa&hm=e861ac8b7bd95ecb4a9f12f9db8d1d9b1743f6d09f9d4ffa1200405cf60f5b7a&=&format=webp&quality=lossless&width=818&height=551" width="400" height="275"></img>
@@ -32,6 +32,10 @@ You can edit the `.cfg` files in the **iw7-mod folder** to your liking. This inc
 - gametype
 - maps
 - MOTD (Message of the Day)
+
+:::tip
+Going through the entire configuration is recommended to understand what settings you want for your server.
+:::
 
 <img src="https://media.discordapp.net/attachments/803370151453524008/1458036081134932018/image.png?ex=695e2d6a&is=695cdbea&hm=91c28d34a8131eb7acd7d730e280e91a3009b5ba8af8635dfe0cd826adc4f90d&=&format=webp&quality=lossless&width=1230&height=666" width="600" height="300"></img>
 

@@ -2,7 +2,9 @@
 
 Port Forwarding is letting a port that is protected by your internet's firewall, usually in the router, from being accessed from the outside world. This is done to protect you, but in this case, the server's port will be public to allow incoming and outcoming requests. **If you are on a VPS, your provider may have a different way of Port Forwarding. Use Google to figure out how your provider handles ports.**
 
-If you are just trying to play with friends locally in Private Match, refer to the [Using a VPN to play with friends](#using-a-vpn-to-play-with-friends) guide below.
+:::info
+If you are just trying to play with friends locally in Private Match, refer to the [Using a VPN to play with friends](#using-a-vpn-to-play-with-friends) guide below as none of this will apply to you otherwise.
+:::
 
 ## Get your IP for port forwarding
 
