@@ -23,7 +23,7 @@ The server files have not been optimized and perfected yet, therefore a standalo
 
 ### "I can't port forward and just play with friends"
 
-No problem, just read this guide on [Using a VPN to play with friends](port-forwarding#using-a-vpn-to-play-with-friends)!
+No problem, just read this guide on [Using a VPN to play with friends!](port-forwarding#using-a-vpn-to-play-with-friends)
 
 ### Editing your server configuration
 

@@ -29,9 +29,17 @@ If you are just trying to play with friends locally in Private Match, refer to t
 
 You can easily play with friends using a software like [RadminVPN](https://www.radmin-vpn.com/help/code56/). **While you all will need it installed**, it is extremely lightweight and lets various computers be connected under one local network, which allows people to join your server as if they were on the same network as you. This **does not** make your port public and is **only recommended for playing with friends.**
 
+:::note
+Using a VPN like RadminVPN does not require you to open ports.
+:::
+
 ## "How do I figure out which ports to open?"
 
 The ports your server will be publicly running on is **all that matters.** By default, the port used is **27016** or **27018**. If you are hosting servers with multiple ports, they all need to be open, otherwise no one will be able to see or join your server.
+
+:::info
+If you are hosting a Private Match, this is not required.
+:::
 
 ## "Why can't I find my server hosted at home while others can?"
 
