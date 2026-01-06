@@ -60,8 +60,7 @@ const sidebars = {
       label: '🔨 Dedicated Server',
       collapsible: true,
       items: [
-        'install-server',
-        'port-forwarding'
+        'iw7-server-guide'
       ]
     },
     {
