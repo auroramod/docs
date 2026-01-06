@@ -21,6 +21,10 @@ The server files have not been optimized and perfected yet. The game does requir
 3. Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016. [To learn more about Port Forwarding, click here.](port-forwarding)
 4. Now you can [edit your configs](iw7-server-guide#editing-your-server-configuration) and [edit your server launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts)!
 
+### "I can't port forward and just play with friends"
+
+No problem, just read this guide on [Using a VPN to play with friends](port-forwarding#using-a-vpn-to-play-with-friends)!
+
 ### Editing your server configuration
 
 You can edit the `.cfg` files in the **iw7-mod folder** to your liking. This includes settings like:

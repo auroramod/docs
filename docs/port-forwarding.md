@@ -1,6 +1,8 @@
 # Port Forwarding
 
-Port Forwarding is letting a port that is protected by your internet's firewall, usually in the router, from being accessed from the outside world. This is done to protect you, but in this case, the server's port will be public to allow incoming and outcoming requests. **If you are on a VPS, your provider may have a different way of Port Forwarding.** ***Make sure to Google what to do for your provider.***
+Port Forwarding is letting a port that is protected by your internet's firewall, usually in the router, from being accessed from the outside world. This is done to protect you, but in this case, the server's port will be public to allow incoming and outcoming requests. **If you are on a VPS, your provider may have a different way of Port Forwarding. Use Google to figure out how your provider handles ports.**
+
+If you are just trying to play with friends locally in Private Match, refer to the [Using a VPN to play with friends](#using-a-vpn-to-play-with-friends) guide below.
 
 ## Get your IP for port forwarding
 
@@ -21,6 +23,9 @@ Port Forwarding is letting a port that is protected by your internet's firewall,
 6. Select `Allow the connection` if it's not, and click `Next >`.
 7. Select past the Profile section and click `Next >`. Name your new rule, and now you are done
 
+## Using a VPN to play with friends
+
+You can easily play with friends using a software like [RadminVPN](https://www.radmin-vpn.com/help/code56/). **While you all will need it installed**, it is extremely lightweight and lets various computers be connected under one local network, which allows people to join your server as if they were on the same network as you. This **does not** make your port public and is **only recommended for playing with friends.**
 
 ## "How do I figure out which ports to open?"
 
