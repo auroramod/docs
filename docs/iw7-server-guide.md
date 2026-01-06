@@ -2,7 +2,7 @@
 
 To create a "dedicated" server, you must have a Computer or VPS that is constantly online 24/7 with good internet connection. It **is recommended** to use a VPS that is not your machine and home connection hosting it. If you are simply hosting a local server you turn on and off, this guide will work perfect for you. 
 
-You may need to [Port Forward your server](port-forward) for people to see it in the Server Browser.
+You may need to [Port Forward your server](port-forwarding) for people to see it in the Server Browser.
 
 ### Requirements
 
@@ -18,7 +18,7 @@ The server files have not been optimized and perfected yet. The game does requir
 
 1. Download the [IW7 Dedicated Server Resources](https://github.com/auroramod/iw7-dedi-resources) from GitHub. You can do so by clicking the green `Code` dropdown box, and clicking `Download ZIP` **on the bottom.**
 2. Move the **iw7-mod folder** and the **.bat** files into your Infinite Warfare folder. <img src="https://media.discordapp.net/attachments/803370151453524008/1458032589591023676/image.png?ex=695e2a2a&is=695cd8aa&hm=e861ac8b7bd95ecb4a9f12f9db8d1d9b1743f6d09f9d4ffa1200405cf60f5b7a&=&format=webp&quality=lossless&width=818&height=551" width="400" height="275"></img>
-3. Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016. [To learn more about Port Forwarding, click here.](port-forward)
+3. Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016. [To learn more about Port Forwarding, click here.](port-forwarding)
 4. Now you can [edit your configs](iw7-server-guide#editing-your-server-configuration) and [edit your server launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts)!
 
 ### Editing your server configuration
