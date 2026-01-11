@@ -44,6 +44,16 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '🎮 IW7-Mod',
+      collapsible: false,
+      items: [
+        'iw7-install',
+        'iw7-update',
+        'iw7-uninstall',
+      ]
+    },
+    {
+      type: 'category',
       label: '🛠 Support',
       collapsible: false,
       items: [
