@@ -50,6 +50,7 @@ const sidebars = {
         'iw7-install',
         'iw7-update',
         'iw7-uninstall',
+        'iw7-server-guide',
       ]
     },
     {
@@ -59,19 +60,11 @@ const sidebars = {
       items: [
         'troubleshoot',
         'errors',
+        'port-forwarding',
         'functions',
         'ingamename',
         'languages',
         'colorcodes',
-      ]
-    },
-    {
-      type: 'category',
-      label: '🔨 Dedicated Server',
-      collapsible: true,
-      items: [
-        'iw7-server-guide',
-        'port-forwarding',
       ]
     },
     {
@@ -100,7 +93,7 @@ const sidebars = {
     {
       type: 'category',
       label: '💣 Extra',
-      collapsible: false,
+      collapsible: true,
       items: [
         'antialiasing',
         'ds4windows',
