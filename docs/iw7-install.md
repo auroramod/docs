@@ -8,6 +8,7 @@ You **must own** the [Call of Duty®: Infinite Warfare](https://store.steampower
 
 :::note
 IW7-Mod is **not** yet released. The official release of the client on January 16th, 2026 will allow usage of this install guide.
+:::
 
 1. Download `iw7-mod.exe` on the latest release from [IW7-Mod](https://github.com/auroramod/iw7-mod/releases).
 2. Move the newly downloaded .exe into the root of the Infinite Warfare game directory.
