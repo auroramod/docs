@@ -1,8 +1,12 @@
-# Go-to Commands
+# Important Commands
+
+:::note
+Most of the information here can be used for **H1-Mod** *and* **IW7-Mod** both.
+:::
 
 ## Opening the console
 
-To open your in-game console, press the  **~** key to type commands. You can also use the external console that is a Command Prompt window.
+To open your in-game console, press the  **~** key to type commands. You can also use the external console that is in the form of a Command Prompt window.
 
 ![](/img/keyboard.png)
 
@@ -30,7 +34,7 @@ cg_fovMin <number>
 
 Play around with these options, as they are meant to be mixed and matched together.
 
-For starters, please find a comfortable preset below, which roughly equates to a 100 FOV:
+For starters, you can use this comfortable preset below, which roughly equates to a 100 FOV:
 
 ```
 cg_fov 75
