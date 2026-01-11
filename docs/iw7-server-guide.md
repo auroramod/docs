@@ -17,7 +17,7 @@ The server files have not been optimized and perfected yet, therefore a standalo
 ### Setting up your server
 
 1. Download the [IW7 Dedicated Server Resources](https://github.com/auroramod/iw7-dedi-resources) from GitHub. You can do so by clicking the green `Code` dropdown box, and clicking `Download ZIP` **on the bottom.**
-2. Move the **iw7-mod folder** and the **.bat** files into your Infinite Warfare folder. <img src="/static/img/server-guide/image1.png" width="400" height="275"></img>
+2. Move the **iw7-mod folder** and the **.bat** files into your Infinite Warfare folder. <img src="img/server-guide/image1.png" width="400" height="275"></img>
 
 3. Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016. [To learn more about Port Forwarding, click here.](port-forwarding)
 4. Now you can [edit your configs](iw7-server-guide#editing-your-server-configuration) and [edit your server launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts)!
@@ -38,7 +38,7 @@ You can edit the `.cfg` files in the **iw7-mod folder** to your liking. This inc
 Going through the entire configuration is recommended to understand what settings you want for your server.
 :::
 
-<img src="/static/img/server-guide/image2.png" width="600" height="300"></img>
+<img src="img/server-guide/image2.png" width="600" height="300"></img>
 
 ### Editing your server launcher scripts
 
@@ -47,4 +47,4 @@ You can edit the `.bat` files in your Infinite Warfare directory to your liking 
 - port
 - developer script (for debugging)
 
-<img src="/static/img/server-guide/image3.png" width="600" height="275"></img>
+<img src="img/server-guide/image3.png" width="600" height="275"></img>
