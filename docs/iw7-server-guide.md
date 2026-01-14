@@ -10,13 +10,18 @@ You may need to [Port Forward your server](port-forwarding) for people to see it
 - A text editor **([VSCode](https://code.visualstudio.com/) or [Notepad++](https://notepad-plus-plus.org/downloads/) is recommended)**
 - ~10gb of free space
 
-### Setting up your server
+### Setting up your server (Windows)
 
 1. Download the [IW7 Dedicated Server Files](https://drive.google.com/file/d/1cMmSzjVS_HQLDceOAIrGA45zZUxVAwAk/view?usp=sharing) zip from Google Drive.
 2. Once downloaded, extract the .zip file to a folder of choice.
 3. Open the extracted folder, and move the **iw7-mod** folder and the **.bat** files __into your Infinite Warfare folder__. <img src="img/server-guide/image1.png" width="400" height="400"></img>
-4. Now you need to Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016 for one server. [To learn more about Port Forwarding, click here.](port-forwarding)
-5. Now you can [edit your .cfg configs](iw7-server-guide#editing-your-server-configuration) and [edit your .bat server launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts)!
+4. **Open `iw7-mod.exe` and let the game run the updates.** You should be on the newest IW7-Mod exe for the latest features and fixes.
+5. Now you need to Port Forward the UDP port(s) [your launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts) will use. By default, it is 27016 for one server. [To learn more about Port Forwarding, click here.](port-forwarding)
+6. Now you can [edit your .cfg configs](iw7-server-guide#editing-your-server-configuration) and [edit your .bat server launcher scripts](iw7-server-guide#editing-your-server-launcher-scripts)!
+
+### Setting up your server (Linux)
+
+TODO
 
 ### "I cannot port forward and would like to play with friends"
 
