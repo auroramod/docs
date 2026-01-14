@@ -50,6 +50,7 @@ const sidebars = {
         'iw7-install',
         'iw7-update',
         'iw7-uninstall',
+        'iw7-on-linux',
         'iw7-server-guide',
       ]
     },
