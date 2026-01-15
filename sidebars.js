@@ -32,14 +32,15 @@ const sidebars = {
   mainSidebar: [
     'about',
     'changelog',
+    'install',
     {
       type: 'category',
       label: '🎮 H1-Mod',
       collapsible: false,
       items: [
-        'install',
+        'h1-install',
         'update',
-        'uninstall',
+        'h1-uninstall',
       ]
     },
     {

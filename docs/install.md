@@ -1,12 +1,15 @@
-# Installing H1-Mod
+# Download
 
 :::warning
-You **must own** the [Call of Duty®: Modern Warfare® Remastered](https://store.steampowered.com/agecheck/app/393080/) game on Steam in order to play H1-Mod.
+You **must own** the respectives games on Steam. We **do not give support for uncracked or unofficial files.**
 :::
 
-## Installing the client
+Aurora currently supports [Call of Duty®: Modern Warfare® Remastered](https://store.steampowered.com/app/393080/Call_of_Duty_Modern_Warfare_Remastered_2017/) and [Call of Duty®: Infinite Warfare](https://store.steampowered.com/app/292730/Call_of_Duty_Infinite_Warfare/) as seperate launchers. Find which game you would like to download below.
 
-1. Download `h1-mod.exe` on the latest release from [H1-Mod](https://github.com/auroramod/h1-mod/releases).
-2. Move the newly downloaded .exe into the root of the MWR game directory.
-3. Make sure to launch the client to download all important files for the client. (Press **Yes** on the updater)
-4. After this, you may open H1-Mod.exe and play. 
+## Download H1-Mod (Modern Warfare Remastered)
+
+[Click here for the guide on installing H1-Mod!](h1-install)
+
+## Download IW7-Mod (Infinite Warfare)
+
+[Click here for the guide on installing IW7-Mod!](iw7-install)
