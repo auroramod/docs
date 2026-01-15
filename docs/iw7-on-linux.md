@@ -10,13 +10,13 @@ The IW7-Mod executable has specific checks to make sure that it can remain compa
 - Disables the custom Steam proxy to allow no weirdness
 - Disables certain anti-tampering patches like "anti-debug"
 
-### Installing Steam
+## Installing Steam natively
 
 To run IW7-Mod, you are going to need [Steam](https://store.steampowered.com/) installed on Linux. To do so, you can open a Terminal run the following command:
 - Arch Linux/CachyOS: `sudo pacman -S steam`
 - Ubuntu/Debian: `sudo apt install steam-installer` *(you may need to run `sudo add-apt-repository multiverse && sudo apt update`)*
 
-### Installing Proton via Steam
+## Installing Proton (via Steam)
 
 You can now open up Steam and head over to your **Library**. At the bottom of the Library, we are going to click `Add a Non-Steam Game...`.
 
