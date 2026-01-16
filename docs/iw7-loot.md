@@ -2,7 +2,7 @@
 
 :::warning
 Leveling up your missions currently do not give you rewards. This is a known issue and will hopefully be fixed in the future.
-::
+:::
 
 Inside `iw7-mod/players2/user/loot/`, a file called `loot.json` is used by the client to show currency data as well as what we should have unlocked. You can edit this JSON and restart your game for new loot data.
 
