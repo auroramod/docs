@@ -27,7 +27,15 @@ If you are just trying to play with friends locally in Private Match, refer to t
 
 ## Using a VPN to play with friends
 
-You can easily play with friends using a software like [RadminVPN](https://www.radmin-vpn.com/). **While you all will need it installed**, it is extremely lightweight and lets various computers be connected under one local network, which allows people to join your server as if they were on the same network as you. This **does not** make your port public and is **only recommended for playing with friends.**
+You can easily play with friends using a software like [RadminVPN](https://www.radmin-vpn.com/). It is lightweight and lets you play with other people under one local network, which allows people to join your server as if they were on the same network as you. This **does not** make your port public and is **only recommended for playing with friends.**
+
+### Private Match
+
+To play Private Match with friends, simply have someone start a game, and then locate their IP on the Radmin network. You'll take this IP address, and type in the ingame console: `/connect ip:27016`. Doing this command will connect you to their game, and now you can play!
+
+### Dedicated Server
+
+To host your dedicated server under a virtual network, make sure your net_port is not `27016` in your server launcher as this will be your actual game. Once the server is online, people in the network can use `/connect ip:port` to join your server.
 
 :::note
 Using a VPN like [RadminVPN](https://www.radmin-vpn.com/) does not require you to open ports.
