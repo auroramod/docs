@@ -1,4 +1,4 @@
-# Changelog
+# H1-Mod Changelog
 
 This is a list of updates H1-Mod has, and the changes through the updates. New updates will be prompted via a popup in the main menu when you open H1-Mod.
 

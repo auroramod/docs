@@ -31,7 +31,6 @@ const sidebars = {
 
   mainSidebar: [
     'about',
-    'changelog',
     'install',
     {
       type: 'category',
@@ -41,6 +40,7 @@ const sidebars = {
         'h1-install',
         'update',
         'h1-uninstall',
+        'h1-changelog',
       ]
     },
     {
@@ -51,6 +51,7 @@ const sidebars = {
         'iw7-install',
         'iw7-update',
         'iw7-uninstall',
+        'iw7-changelog',
         'iw7-on-linux',
         'iw7-server-guide',
       ]
