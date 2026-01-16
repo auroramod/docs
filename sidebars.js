@@ -102,6 +102,7 @@ const sidebars = {
         'antialiasing',
         'ds4windows',
         'fullbright',
+        'iw7-loot'
       ]
     },
   ],
