@@ -67,6 +67,7 @@ const sidebars = {
         'ingamename',
         'languages',
         'colorcodes',
+        'commandlineargs'
       ]
     },
     {
