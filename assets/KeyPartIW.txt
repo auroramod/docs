@@ -1,0 +1,157 @@
+Keys : 0
+Parts : 1795
+
+online_mp_xpscale 2 ;online_mp_weapon_xpscale 2 ;online_mp_missionteam_xpscale 2 ;bot_difficulty 1
+
+
+
+140552 Jagged Camouflage Assault Rifles				-- 02 --
+40100 Thick Skull Calling Card						-- 03 --				
+100030 JTF Wolverines Emblem						-- 04 --
+100 Salvage											-- 05 --
+140554 Jagged Camouflage Combat Knife				-- 06 --
+100 Salvage											-- 07 --
+40101 Skulking Calling Card							-- 08 --
+110038 JTF Wolverines Move Up Gesture				-- 09 --
+34 FHR-40 Counterweight								-- 10 --
+120134 Roamer Warfighter Body						-- 11 --
+140558 Jagged Camouflage Submachine Guns			-- 12 --
+40102 Snake Eyes Calling Card						-- 13 --
+100031 JTF Wolverines Patch Emblem					-- 14 --
+125 Salvage											-- 15 --
+40103 Pile of Bones Calling Card					-- 16 --
+150 Salvage											-- 17 --
+110125 First in the Fight! Taunt 					-- 18 --
+100032 Snarl Emblem									-- 19 --
+42 Kendall 44 Dominion								-- 20 --
+140553 Jagged Camouflage Light Machine Guns			-- 21 --
+150 Salvage											-- 22 --
+130017 Lacerate Standard Reticle					-- 23 --
+40104 Wild Child Calling Card						-- 24 --
+120135 Roamer Warfighter Head						-- 25 --
+100033 Wolverines for Hire Emblem					-- 26 --
+110039 Filthy Lucre Gesture							-- 27 --
+140556 Jagged Camouflage Launchers					-- 28 --
+40105 Ancient One Calling Card						-- 29 --
+112 HVR Atlas										-- 30 --
+100034 The Den Emblem								-- 31 --
+175 Salvage											-- 32 --
+140557 Jagged Camouflage Shotguns					-- 33 --
+40106 Osteodactyl Calling Card						-- 34 --
+120142 Big W Merc Body								-- 35 --
+200 Salvage											-- 36 --
+40107 Guardian Calling Card							-- 37 --
+200 Salvage											-- 38 --
+140559 Jagged Camouflage Sniper Rifles				-- 39 --
+16 Karma-45 Kismet									-- 40 --
+120141 Big W Merc Head								-- 41 --
+250 Salvage											-- 42 --
+40108 The Clan Calling Card							-- 43 --
+150034 Wolverine Buddy Accessory					-- 44 --
+250 Salvage											-- 45 --
+110126 Primal Taunt 								-- 46 --
+140555 Jagged Camouflage Handguns					-- 47 --
+40109 Tradition Calling Card						-- 48 --
+300 Salvage											-- 49 --
+37 FHR-40 Windfall									-- 50 --
+
+
+
+
+
+140489 Centurion Camouflage Light Machine Guns		-- 02 --
+40110 Go Calling Card								-- 03 --
+100035 The Orion Initiative Emblem					-- 04 --
+100 Salvage											-- 05 --
+14049x Centurion Camouflage Sniper Rifles			-- 06 --
+100 Salvage											-- 07 --
+40111 Royalty Calling Card							-- 08 --
+110040 On Me Gesture								-- 09 --
+14 Karma-45 Gluttony								-- 10 --
+120143 Rook Stryker Head							-- 11 --
+40112 The General Calling Card						-- 12 --
+													-- 13 --
+100036 Orion Initiative Patch Emblem				-- 14 --
+125 Salvage											-- 15 --
+40113 Battle Lines Calling Card						-- 16 --
+150 Salvage											-- 17 --
+													-- 18 --
+100037 Keen Eye Emblem								-- 19 --
+11 Widowmaker Utopian								-- 20 --
+14049x Centurion Camouflage Assault Rifle			-- 21 --
+150 Salvage											-- 22 --
+13018 Celestial Wishes Standard Reticle				-- 23 --
+40114 Operation Neptune Calling Card				-- 24 --
+120144 Bishop Stryker Body							-- 25 --
+100038 Orion, Inc. Emblem							-- 26 --
+													-- 27 --
+14049x Centurion Camouflage Submachine Guns			-- 28 --
+40115 Standoff Calling Card							-- 29 --
+44 Kendall 44 Wraith								-- 30 --
+100039 The HAB Emblem								-- 31 --
+													-- 32 --
+14049x Centurion Camouflage Launcher				-- 33 --
+40116 Baker Company Calling Card					-- 34 --
+120150 Bishop Phantom Body 							-- 35 --
+200 Salvage											-- 36 --
+40117 Land Grab Calling Card						-- 37 --
+													-- 38 --
+14049x Centurion Camouflage Light Machine Guns		-- 39 --
+37	FHR-40 Havoc									-- 40 --
+120149 Bishop Phantom Head							-- 41 --
+250 Salvage											-- 42 --
+40118 War Plans Calling Card						-- 43 --
+													-- 44 --
+													-- 45 --
+													-- 46 --
+140491 Centurion Camouflage HandGuns				-- 47 --
+40119  	Long Live the King Calling Card				-- 48 --
+300 Salvage											-- 49 --
+17 Karma-45 Phobos									-- 50 --
+
+
+
+
+
+140613 Blu-Resin Camouflage Shotguns				-- 02 --
+40120 Chalk Calling Card							-- 03 --
+100040 Sabre Team Seven Emblem						-- 04 --
+100 Salvage Currency								-- 05 --
+140615 Blu-Resin Camouflage Sniper Rifles			-- 06 --
+100 Salvage Currency								-- 07 --
+40121 Imprint Calling Card							-- 08 --
+110042 What? Gesture								-- 09 --
+111 HVR Gunslinger									-- 10 --
+120137 Cutlass Stryker Head							-- 11 --
+140610 Blu-Resin Camouflage Melee Weapons			-- 12 --
+40122 The Weapon Calling Card						-- 13 --
+100041 Sabre Team Seven Patch Emblem				-- 14 --
+125 Salvage Currency								-- 15 --
+40123 Three Shots Calling Card						-- 16 --
+150 Salvage Currency								-- 17 --
+110131 What Were You Thinking? Taunt				-- 18 --
+100042 Seven Swords Emblem							-- 19 --
+35 FHR-40 Requisition								-- 20 --
+140608 Blu-Resin Camouflage Assault Rifles			-- 21 --
+150 Salvage Currency								-- 22 --
+130019 Fulcrum Standard Reticle						-- 23 --
+40124 Forensics Calling Card						-- 24 --
+120138 Cutlass Stryker Body							-- 25 --
+100043 Sabre Industries Emblem						-- 26 --
+110043 Boom Gesture									-- 27 --
+140614 Blu-Resin Camouflage Submachine Guns			-- 28 --
+40125 Recovered Calling Card						-- 29 --
+12 Widowmaker Fate									-- 30 --
+100044 The Firing Range Emblem						-- 31 --
+175 Salvage Currency 								-- 32 --
+140612 Blu-Resin Camouflage Launchers				-- 33 --
+40126 Calculated Calling Card						-- 34 --
+120146 Bladework FTL Body							-- 35 --
+200 Salvage Currency 								-- 36 -- 
+40127 Seen This Before? Calling Card				-- 37 --
+200 Salvage Currency								-- 38 --
+140609 Blu-Resin Camouflage Light Machine Guns		-- 39 --
+45 Kendall 44 Advantage								-- 40 --
+120145 Bladework FTL Head							-- 41 --
+200 Salvage Currency								-- 42 --
+40128 What Do We Have Here? Calling Card 			-- 43 --		
