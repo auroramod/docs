@@ -25,5 +25,5 @@ For example, to give yourself 10 creates for Common & Rare crates, you would sim
 
 To understand Loot IDs and what they are better, there are two resources you can use.
 
-- [KeyPartIW.txt](/static/assets/KeyPartIW.txt), created by **GrabiouL**
-- [iw7_mission_loot_master.csv](/static/assets/iw7_mission_loot_master.csv), which the game uses to understand what to give for Mission rewards. Each row vertically is for the 5 teams, while the index horizontially is the level up rewards.
+- [KeyPartIW.txt](/assets/KeyPartIW.txt), created by **GrabiouL**
+- [iw7_mission_loot_master.csv](/assets/iw7_mission_loot_master.csv), which the game uses to understand what to give for Mission rewards. Each row vertically is for the 5 teams, while the index horizontially is the level up rewards.
