@@ -9,7 +9,7 @@ This is a list of updates IW7-Mod has, and the changes through the updates. New 
 - Fixed dvar flags not being overrided correctly (ex: deadzone dvars work now)
 - Fixed timescale not being replicated
 - Fixed Discord RPC not showing the map being played
-- Reduce the stress of profile info packets ([iw7-mod#634](https://github.com/auroramod/iw7-mod/pull/634))
+- Reduce the stress of profile info packets [iw7-mod#634](https://github.com/auroramod/iw7-mod/pull/634)
 
 ### Known Issues
 
