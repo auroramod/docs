@@ -1,5 +1,11 @@
 # Errors
 
+## LUI script execution error: attempt to index a nil value
+
+If this is happening in a file that Aurora officially ships, **you will need to install download and run [Chase's Redist Installer](https://chse.dev/redists)** for Visual Studio C++ redists. **This is safe to do.**
+
+![](/img/iw7/redist-lui-err.png)
+
 ## "MISSING FILE" error
 
 This is due to the file structure in the Steam version and can be fixed by using the [COD Files Cleaner](https://github.com/skkuull/cod-files-cleaner) to re-structure your directory or by doing the following:
