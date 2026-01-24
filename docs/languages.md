@@ -11,7 +11,7 @@ If you own the game on Steam, you can download the language pack needed for the 
 
 :::warning
 
-If you have downloaded the game from Steam, you might not have the `zone` folder present in your files. We highly recommend you to use [MWR Files Cleaner](https://github.com/skkuull/mwr-files-cleaner) to get better directory structures that are easier to work with.
+If you have downloaded the game from Steam, you might not have the `zone` folder present in your files. We highly recommend you to use [Liam's File Cleaner](https://github.com/Lierrmm/FileCleaner) to get better directory structures that are easier to work with.
 
 :::
 

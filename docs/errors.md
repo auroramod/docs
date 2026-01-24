@@ -8,7 +8,7 @@ If this is happening in a file that Aurora officially ships, **you will need to 
 
 ## "MISSING FILE" error
 
-This is due to the file structure in the Steam version and can be fixed by using the [COD Files Cleaner](https://github.com/skkuull/cod-files-cleaner) to re-structure your directory or by doing the following:
+This is due to the file structure in the Steam version and can be fixed by using the [Liam's File Cleaner](https://github.com/Lierrmm/FileCleaner) to re-structure your directory or by doing the following:
 
 1. Move all .bik files to `/raw/video/` folder
 2. Move all .ff, .pak files and localization folder (`english` or any other) to `/zone/` folder
