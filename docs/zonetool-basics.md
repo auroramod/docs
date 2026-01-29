@@ -44,6 +44,7 @@ An asset listing is a dump of the fastfiles' CSVs, which contains data about wha
 
 You can download any `.zip` file you need to browse the zone files. You need a `.zip` extractor, *like 7-Zip or Winrar*, to extract the zip to disk as a folder. You can also use [VSCode](https://code.visualstudio.com/) to search through all of the files in the folder at once.
 - [Ghosts Asset Listing](/assets/listing/iw6_asset_listing.zip)
+- [Infinite Warfare Asset Listing](/assets/listing/iw7_asset_listing.zip)
 - [AW Asset Listing](/assets/listing/s1_asset_listing.zip)
 - [MWR Asset Listing](/assets/listing/h1_asset_listing.zip)
 - [MW2:CR Asset Listing](/assets/listing/h2_asset_listing.zip)
