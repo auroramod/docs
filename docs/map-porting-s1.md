@@ -1,8 +1,14 @@
-# Map Porting (S1 -> H1 <- H2)
+# Map Porting (between AW, MWR, MW2:CR)
 
-To port maps from S1 or H2, you must use [x64-zt](https://github.com/Joelrau/x64-zt). You can also download the [S1 Asset Listing from here](https://cdn.discordapp.com/attachments/1032511834420420640/1196505669440909372/s1_asset_listing.zip?ex=67080e3d&is=6706bcbd&hm=680cfcc7511fe2ddb124439c0b9f4ee2c58e6769e1c609f9fde69abb08c82c8a&)
+:::tip
+Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [commands for Zonetool](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+:::
 
-Once you find the zone you want to dump *(example: mp_greenband from S1)*, use the `dumpmap <target game> <zone>` command and wait for your zone to dump. 
+To port maps between any next-gen game, you must use [x64-zt](https://github.com/Joelrau/x64-zt), which you can [download by clicking right here.](https://github.com/Joelrau/x64-zt/releases/tag/latest)
+
+Once you find the map you want to dump, you need to find the zone for it. In this guide, we are porting **Greenband** from AW to MWR, so look in the zone folder for anything mentioning the map or theme. (For example, it is `mp_greenband` in the AW zone folder)
+
+Now use the `dumpmap <target game> <zone>` command and wait for your zone to dump. 
 1. Run the command at `dumpmap h1 mp_greenband`
 2. Find the finalized dumped zone folder at `%S1 game files%/dump/mp_greenband/`
 3. Move the dumped folder to `%MWR game files%/zonetool/mp_greenband/`
