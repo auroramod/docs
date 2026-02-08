@@ -2,7 +2,7 @@
 
 ## File structure
 
-GSC scripts should be placed in `<game folder>/<h1|iw7>-mod/scripts/`. In the scripts folder, any GSC script with the `.gsc` suffix will be attempted to be loaded by the clients. Refer to the folder structure below to understand what mode-specific GSCs you can load.
+GSC scripts should be placed in `h1-mod/iw7-mod` folder in your desired game's folder. In the scripts **(or custom_scripts for IW7)** folder, any GSC script with the `.gsc` suffix will be attempted to be loaded by the clients. Refer to the folder structure below to understand what mode-specific GSCs you can load.
 
 To figure out what your file structure should look like, refer to below.
 
@@ -23,7 +23,7 @@ Modern Warfare Remastered
 ```
 Modern Warfare Remastered
 ├── iw7-mod
-│   ├── scripts
+│   ├── custom_scripts
 │   │   ├── all_modes.gsc
 |   |   ├── mp
 |   |   |   └── my_multiplayer_script.gsc
