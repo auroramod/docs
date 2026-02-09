@@ -2,6 +2,15 @@
 
 This is a list of updates IW7-Mod has, and the changes through the updates. New updates will be automatically installed when you launch IW7-Mod.
 
+## v1.0.4
+### Changes
+- Added Directors Cut to Stats & make it a dvar [iw7-mod#647](https://github.com/auroramod/iw7-mod/issues/647)
+- Added experimental `bg_disableBarrierClips` dvar
+- Added `cg_unlimited_cards` and Unlimited Cards toggle [iw7-mod#652](https://github.com/auroramod/iw7-mod/pull/652)
+- Reimplented clan tags [iw7-mod#653](https://github.com/auroramod/iw7-mod/pull/653)
+- Various UI fixes
+
+
 ## v1.0.3
 
 ### Changes
