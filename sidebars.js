@@ -73,6 +73,14 @@ const sidebars = {
     },
     {
       type: 'category',
+      label: '➕ Mods',
+      collapsible: false,
+      items: [
+        'loading-mods'
+      ]
+    },
+    {
+      type: 'category',
       label: '💻 Scripting',
       collapsible: true,
       items: [
