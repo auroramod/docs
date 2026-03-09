@@ -73,10 +73,11 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: '➕ Mods',
+      label: '➕ Custom Maps & Mods',
       collapsible: false,
       items: [
-        'loading-mods'
+        'loading-mods',
+        'loading-usermaps'
       ]
     },
     {
