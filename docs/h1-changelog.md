@@ -2,11 +2,31 @@
 
 This is a list of updates H1-Mod has, and the changes through the updates. New updates will be prompted via a popup in the main menu when you open H1-Mod.
 
-## v2.0.3
+## v2.1.0
 
 ### Changes
+- Added `r_colorMode` dvar (custom by default, original is a choice)
+- Added `pm_iw4Mechanics` dvar (MW2 player mechanics from H2M, off by default)
+- Added `pm_glideOnInspect` dvar 
+- Added `xpartygogametype <gametype>` command 
+- Added `lookupsoundlength` GSC function from SP **for MP**
+- Added `markdangerousnodes` & `markdangerousnodesintrigger` GSC functions from Ghosts (as well as jump nodes for Extinction - scr_enableJumpNodes)
+- Added Bot Warfare .csv path data loading (`maps/mp/{}_wp.csv` will [re]load every map load/reestart)
+- Added TTF font overriding for mods (override/)
+- Added LUI script loading for mods 
+- Added usage of "unauthorized" clan-tags
 - Fixed custom images
-- Reimplement original color codes & add new ones ([find the color codes here!](colorcodes.md))
+- Fixed AMD vendor patches not applying with H1-Mod (purple visuals bug)
+- Fixed menu cursor not working for .menu files
+- Fixed numerous crashes and bugs
+- Fixed `moveSpeedScale` not being changeable from GSC
+- Fixed file compatibility checking
+- Fixed map list not showing custom content properly
+
+### Changes (Debug)
+- Added `r_drawFxInfo` dvar
+- Added ImGUI ConfigString, Techset, Shader, & Rawfile views and other various improvements
+- Added `add_debug_node`, `add_debug_line`, `add_debug_line`, `remove_debug_line`, and `reset_debug_items` for drawing 3D from GSC
 
 ## v2.0.2
 
