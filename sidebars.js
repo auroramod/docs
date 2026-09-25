@@ -100,6 +100,7 @@ const sidebars = {
         'zonetool-basics',
         'map-porting-iw5',
         'map-porting-s1',
+        'zonetool-extra',
         'map-arena-files'
       ]
     },
