@@ -26,6 +26,13 @@ Modern Warfare Remastered
 └── h1-mod.exe
 ```
 
+## How to load custom LUI in mods
+
+H1-Mod will load custom ui_scripts present as long as it is parsed as a rawfile, and has `ui_scripts/my_cool_script/__init__.lua` for example. To parse in csv, it would be:
+```
+rawfile,ui_scripts/mp_cool_script/__init__.lua
+```
+
 ## Stuck on "waiting for more players"/cannot do anything
 
 Add this to your map's `.ents` file that is JSON-like at the beginning:
