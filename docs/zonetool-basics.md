@@ -10,6 +10,112 @@ x64-zt is a tool for reading and writing fastfiles and their assets for the *nex
 
 This tool is mainly for newer Call of Duty games like Ghosts, Advanced Warfare, Modern Warfare, Infinite Warfare, and Modern Warfare 2: Campaign Remastered. The codenames for each game represent the company who developed it, and what iteration of game it is. So Ghosts is **IW6**, IW's 6th game, while **S1** (AW) and **H1** (MWR) are Slegehammer & Halfmoon's first games. Anything listed in the conversion support table below is what is supported.
 
+## Where does a map/mod folder go?
+
+The biggest confusion with zonetool is where it loads mods. Any type of zonetool made by rektinator/Joelrau will **always** load mods from a `zonetool` folder, which inside of there, contains all of your actual mod folders.
+
+### Mods
+The following is a example of a custom mod folder that has a custom extinction asset from Ghosts converted to MWR, and a _gametypes.txt override to let the engine know about more gamemodes we want to load:
+```
+Modern Warfare Remastered
+├── zonetool
+│   ├── custom_gamemode
+│   │   ├── override
+|   |   |   ├── maps
+|   |   |   |   ├── mp
+|   |   |   |   |   ├── gametypes
+|   |   |   |   |   |   └── _gametypes.txt
+│   │   ├── weapons
+│   │   |   ├── alienbomb_mp.json
+└── h1-mod.exe
+```
+
+### Maps
+The following is a example of a custom map folder to show you simply where it goes. This is usually made up of 90% assets we never touch, so to save room, `...` is shown:
+```
+Modern Warfare Remastered
+├── zonetool
+│   ├── mp_test_map
+│   │   └── ...
+└── h1-mod.exe
+```
+
+## How to add assets to your mod (zone source)
+The most **important part** of loading your custom assets for your map OR mod is making sure it has a zone source, so that zonetool knows where to find it. You can simply set this up by making a `zone_source` folder, and matching the .csv name to be just like your mod/map:
+```
+Modern Warfare Remastered
+├── zonetool
+│   ├── custom_gamemode
+│   │   ├── override
+│   │   ├── weapons
+├── zone_source
+│   ├── custom_gamemode.csv
+└── h1-mod.exe
+```
+
+A example .csv can be found for a map right below:
+```zone
+// map assets (col_map_mp is first to fix possible crashes)
+col_map_mp,maps/mp/mp_template.d3dbsp
+com_map,maps/mp/mp_template.d3dbsp
+gfx_map,maps/mp/mp_template.d3dbsp
+fx_map,maps/mp/mp_template.d3dbsp
+glass_map,maps/mp/mp_template.d3dbsp
+map_ents,maps/mp/mp_template.d3dbsp
+phys_worldmap,maps/mp/mp_template.d3dbsp
+
+// use mp_vlobby_room aipaths and rename to your map, or use the waypoint editor for future.
+// if you are porting a map, this will be uncommented for bots and AI to move
+#aipaths,maps/mp/mp_template.d3dbsp
+
+// netconstrings (DO NOT REMOVE)
+netconststrings,ncs_lsr_level
+netconststrings,ncs_lui_level
+netconststrings,ncs_acl_level
+netconststrings,ncs_fxt_level
+netconststrings,ncs_anm_level
+netconststrings,ncs_hnt_level
+netconststrings,ncs_att_level
+netconststrings,ncs_wep_level
+netconststrings,ncs_sel_level
+netconststrings,ncs_mic_level
+netconststrings,ncs_nps_level
+netconststrings,ncs_hic_level
+netconststrings,ncs_tag_level
+netconststrings,ncs_mnu_level
+netconststrings,ncs_shk_level
+netconststrings,ncs_snl_level
+netconststrings,ncs_sbx_level
+netconststrings,ncs_snd_level
+netconststrings,ncs_loc_level
+netconststrings,ncs_vfx_level
+netconststrings,ncs_veh_level
+netconststrings,ncs_rmb_level
+netconststrings,ncs_mat_level
+netconststrings,ncs_mdl_level
+
+// rawfiles (refer to stock gsc dump for reference)
+#rawfile,vision/mp_template.vision
+
+#rawfile,maps/mp/mp_template.gsc
+#rawfile,maps/mp/mp_template_fx.gsc
+#rawfile,maps/mp/mp_template_precache.gsc
+
+#rawfile,maps/createfx/mp_template_fx.gsc
+
+#rawfile,maps/createart/mp_template_art.gsc
+#rawfile,maps/createart/mp_template_fog.gsc
+#rawfile,maps/createart/mp_template_fog_hdr.gsc
+
+// compass image
+material,compass_map_mp_template
+
+// iterator
+#iterate,xmodel
+#iterate,xanim
+#iterate,fx
+```
+
 ## Game conversion support
 
 || **IW6** | **S1** | **H1** | **H2** | **IW7** |
