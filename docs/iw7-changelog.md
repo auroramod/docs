@@ -2,6 +2,26 @@
 
 This is a list of updates IW7-Mod has, and the changes through the updates. New updates will be automatically installed when you launch IW7-Mod.
 
+## v1.1.0
+### Changes
+- Fixed bot difficulty not changing [iw7-mod#684](https://github.com/auroramod/iw7-mod/pull/684)
+- Fixed Fate Cards resetting after session [iw7-mod#670](https://github.com/auroramod/iw7-mod/pull/670)
+- Fixed rare zombie crate rewards [9522fce](https://github.com/auroramod/iw7-mod/commit/9522fce3835e1a9bb52d02be3f236f5c040df82b)
+- Fixed particle effect flickering on AMD GPUs
+- Fixed Steam game overlay not rendering correctly
+- Majorly improved Combat Training (18 bots, map vote, fixed bugs)
+- Added Gamemode Settings to Combat Training to configure matches however you like
+- Fully implemented `bg_bounces` dvar 
+- Added `getviewpos`, `setviewpos`, `getviewang`, `setviewang` commands
+- Added legacy mantling `mantle_legacy` dvar
+- Added D3D11on12 support
+- Added ImGui overlay in debug builds to assist in modding
+- Added Mission Team and contract rewards
+- Added multi-instance support
+- Salvage & keys are now properly awarded at the end of matches
+- Salvage can now be earned just by simply playing games
+- Additional bug and crash fixes
+
 ## v1.0.4
 ### Changes
 - Added Directors Cut to Stats & make it a dvar [iw7-mod#647](https://github.com/auroramod/iw7-mod/issues/647)
