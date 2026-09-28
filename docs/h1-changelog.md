@@ -2,6 +2,13 @@
 
 This is a list of updates H1-Mod has, and the changes through the updates. New updates will be prompted via a popup in the main menu when you open H1-Mod.
 
+## v2.1.1
+
+### Changes
+- Fixed depot not loading/saving
+- Fixed `json_to_lua` returning empty table
+- Fixed bot pathing hook causing bots to not navigate correctly.
+
 ## v2.1.0
 
 ### Changes
