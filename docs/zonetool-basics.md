@@ -149,11 +149,12 @@ material,compass_map_mp_template
 An asset listing is a dump of the fastfiles' CSVs, which contains data about what assets it contains. This is used to primarily locate specific assets you want, or to find data about a techset so you can dump the zone. The name of a `.zone` file will correlate to a real `.ff` fastfile you have in your game files.
 
 You can download any `.zip` file you need to browse the zone files. You need a `.zip` extractor, *like 7-Zip or Winrar*, to extract the zip to disk as a folder. You can also use [VSCode](https://code.visualstudio.com/) to search through all of the files in the folder at once.
-- [Ghosts Asset Listing](/assets/listing/iw6_asset_listing.zip)
-- [Infinite Warfare Asset Listing](/assets/listing/iw7_asset_listing.zip)
-- [AW Asset Listing](/assets/listing/s1_asset_listing.zip)
-- [MWR Asset Listing](/assets/listing/h1_asset_listing.zip)
-- [MW2:CR Asset Listing](/assets/listing/h2_asset_listing.zip)
+- [Ghosts (IW6)](/assets/listing/iw6_asset_listing.zip)
+- [Infinite Warfare (IW7)](/assets/listing/iw7_asset_listing.zip)
+- [Advanced Warfare (S1)](/assets/listing/s1_asset_listing.zip)
+- [Modern Warfare Remastered (H1)](/assets/listing/h1_asset_listing.zip)
+- [MW2 Campaign Remastered (H2)](/assets/listing/h2_asset_listing.zip)
+- [WWII (S2)](/assets/listing/s2_asset_listing.zip)
 
 ## Porting maps from old-gen to next-gen
 You can learn how to port maps from older games into the next-generation games [in this guide here.](map-porting-iw5)
