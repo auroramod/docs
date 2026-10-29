@@ -1,20 +1,44 @@
 # Map Porting (between AW, MWR, MW2:CR)
 
 :::tip
-Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [commands for Zonetool](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
 :::
 
-To port maps between any next-gen game, you must use [x64-zt](https://github.com/Joelrau/x64-zt), which you can [download by clicking right here.](https://github.com/Joelrau/x64-zt/releases/tag/latest)
+To port maps between the next-generation games, use [x64-zt](https://github.com/Joelrau/x64-zt). You can [download it here](https://github.com/Joelrau/x64-zt/releases/tag/latest).
 
-Once you find the map you want to dump, you need to find the zone for it. In this guide, we are porting **Greenband** from AW to MWR, so look in the zone folder for anything mentioning the map or theme. (For example, it is `mp_greenband` in the AW zone folder)
+First, find the zone of the map you want to port. Look in the source game's `zone/` folder for the map name. This guide ports **Greenband** from AW (S1) to MWR (H1). Its zone is `mp_greenband`.
 
-Now use the `dumpmap <target game> <zone>` command and wait for your zone to dump. 
-1. Run the command at `dumpmap h1 mp_greenband`
-2. Find the finalized dumped zone folder at `%S1 game files%/dump/mp_greenband/`
-3. Move the dumped folder to `%MWR game files%/zonetool/mp_greenband/`
-4. Open x64-zt, and run the command `generatecsv <zone>` *(example: `generatecsv mp_greenband`)*
+1. Put `zonetool.exe` in the **source** game folder (AW), and open a terminal there.
+2. Dump and convert the map:
 
-After you've generated your CSV, your map can now be built. Simply run `buildzone mp_greenband` to build the map.
+   ```bash
+   zonetool.exe dumpmap mp_greenband --target h1
+   ```
+
+   If MWR is not in the default Steam folder, also give its folder:
+
+   ```bash
+   zonetool.exe -target_path "D:\Games\MWR" dumpmap mp_greenband --target h1
+   ```
+
+3. Move the dump from `<AW folder>/dump/mp_greenband/` to `<MWR folder>/zonetool/mp_greenband/`.
+4. Put `zonetool.exe` in the **target** game folder (MWR), open a terminal there, and make the CSV:
+
+   ```bash
+   zonetool.exe generatecsv mp_greenband
+   ```
+
+5. Build the map:
+
+   ```bash
+   zonetool.exe buildzone mp_greenband
+   ```
+
+The map is now at `<MWR folder>/zone/mp_greenband.ff`.
+
+:::tip
+To keep one copy of `zonetool.exe`, save the folder of each game in `zonetool.json` and select the game with `-game`. See [Running from another folder](zonetool-basics#running-from-another-folder).
+:::
 
 ### Extra steps
 For the map to look correct, you must create a GSC file for your map. This will be a script that will be executed once the map starts. This script differs on multiplayer & singleplayer. Dumping a map from S1 or H2 should have a map GSC you can use or reference to make a new one.
@@ -43,8 +67,8 @@ main()
 
 ### Red images
 Red images indicates that you are missing images. Dump the source game's common fastfile *(most of the time it is called `common_mp` for multiplayer and `common` for singleplayer)* using the command:
-```
-dumpzone <target game> common_mp
+```bash
+zonetool.exe dumpzone common_mp --target h1
 ```
 
 Note that a "patch" version of the common fastfile always exists (example: `patch_common_mp`), so the assets could also be there.
@@ -63,7 +87,7 @@ This most likely indicates you are missing that particular material, the same fi
 ### Bad weaponinfo X specified for turret. It likely needs to be precached in script.
 This indicates that the original map includes a turret, you can either:
 
-Simply remove the turret entirely (this is advised unless you really want the turret). To do this, open the `<mapname>.d3dbsp.ents` file you will find in `zonetool/mapname/maps/mp` or `zonetool/mapname/maps/` and search for `"weaponinfo"`. Once found, remove the entire section that includes it, example:
+Remove the turret entirely (this is advised unless you really want the turret). To do this, open the `<mapname>.d3dbsp.ents` file you will find in `zonetool/mapname/maps/mp` or `zonetool/mapname/maps/` and search for `"weaponinfo"`. Once found, remove the entire section that includes it, example:
 ```json
 {
 "bottomarc" "70"
