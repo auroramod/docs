@@ -1,7 +1,7 @@
 # Map Porting (COD4/MW2/MW3 -> MWR/S1/MW2:CR)
 
 :::tip
-Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [commands for Zonetool](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
 :::
 
 To port maps from IW3, IW4, or IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/x64) on the **x64** branch from GitHub. This version of **zonetool** will convert assets from older games to the Ghost-engine games like IW6, S1, H1, or H2. When the converted assets are dumped with older zonetool, you use **x64-zt** for building these converted assets for your game of choice.
@@ -11,15 +11,15 @@ Due to massive engine changes with lighting and such done from *Modern Warfare 3
 :::
 
 To start the map porting process, you'll need:
-- the [zonetool .exe](https://github.com/ZoneTool/zonetool-binaries) for your game, which goes in the game files of that game
+- [x64-zt](https://github.com/Joelrau/x64-zt/releases/tag/latest) (`zonetool.exe`), which goes in the folder of the game you port to
 - the [zonetool .dll](https://github.com/Joelrau/zonetool/tree/x64) from **Joelrau** compiled, which dumps old game's assets in a format for x64-zt to build *(targets H1)*
 
 Once you find the zone you want to dump *(example: mp_bog from IW3)*, use the `dumpzone mp_bog <game?>` command and wait for your zone to dump. *(The `<game?>` part can be **IW6**, **S1**, **H1**, or **H2**, and this will dump your map for another game)*
 1. Find the finalized dumped zone folder at `%COD4 game files%/dump/mp_bog/`
 2. Move the dumped folder to `%MWR game files%/zonetool/mp_bog/`
-3. Open x64-zt, and run the command `generatecsv <zone>` *(example: `generatecsv mp_bog`)*
+3. In the MWR folder, run `zonetool.exe generatecsv mp_bog` to make `zone_source/mp_bog.csv`
 
-After you've generated your CSV, your map can now be built. Simply run `buildzone <zone>` to build the map.
+After you've generated your CSV, build the map with `zonetool.exe buildzone mp_bog`. The map is written to `%MWR game files%/zone/mp_bog.ff`.
 
 ### Fixing "Could not find mapped X techset for Y techset"
 :::warning
@@ -38,21 +38,15 @@ When porting from older games before S1 into H1, techsets are remapped to use H1
 
 Some things are different in the H1 techset's name. For example, if you have `r0c0n0s0p0` in IW5, it might now be `r0c0n0sd0p0`. Another example is `o0` being `om0`. There are also values with the name first letter like `sr0`.
 
-Before you start finding missing techsets, use `dumpzone <zone name>` to obtain the common assets & techsets:
+Before you start finding missing techsets, run x64-zt in the MWR folder and use `zonetool.exe dumpzone <zone name>` to obtain the common assets & techsets:
 - `techsets_common_mp`
 - `techsets_mp_killhouse`
 - `techsets_ac130`
 
 These will help you filter out any common techset errors you'll get. Put all of these dumped folders into a new folder created called `%MWR game files%/zonetool_paths/`.
 
-### SP techset dumping
-Before dumping techsets from singleplayer, you must run the command `loadzone techsets_common`, and then you can use dump your singleplayer techsets zone. 
-
-### SP material limit error
-If you a hit a material limit dumping a singleplayer zone/map, you must modify zonetool to load `code_post_gfx` + `common` instead of `code_post_gfx_mp` + `common_mp`. You can find the [code for common zones here](https://github.com/Joelrau/x64-zt/blob/main/src/zonetool/component/h1/zonetool.cpp#L251).
-
 ### Missing techsets
-To find missing techsets your map needs, try building your zone in x64-zt. When your zone is building, you might recieve a error alongside something to do with "statebit info", "techset", or a very long and weird name. This usually indicates missing techset errors and are easy to resolve.
+To find missing techsets your map needs, build your zone with `zonetool.exe buildzone <zone>`. During the build, you might receive an error alongside something to do with "statebit info", "techset", or a very long and weird name. This usually indicates missing techset errors and are easy to resolve.
 
 :::warning
 When going through the asset listing to find your desired techset, you'll need to look for techsets that are **NOT** reference assets. For example:
@@ -66,7 +60,7 @@ reference example (bad, uses two commas):
 (Singleplayer game files **may be required** for some missing techsets)
 :::
 
-When you dump the zone that contains your desired techset, it should start with **techset_**. After running the `dumpzone <zone>` command, find your desired techset zone folder in your dump folder *(located at `%game files%/dump/`)*, and then put it in `%game files%/zonetool_paths/techsets_mp_bog/`. x64-zt will now look here for techsets before erroring!
+When you dump the zone that contains your desired techset, it should start with **techset_**. After running `zonetool.exe dumpzone <zone>`, find your desired techset zone folder in your dump folder *(located at `%game files%/dump/`)*, and then put it in `%game files%/zonetool_paths/techsets_mp_bog/`. x64-zt will now look here for techsets before erroring!
 
 **You may need to repeat this process multiple times until you have no errors.**
 
