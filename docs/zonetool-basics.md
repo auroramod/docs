@@ -26,6 +26,7 @@ Each game has a codename for the studio and its game number. For example, Ghosts
 | `h2` | Call of Duty: Modern Warfare 2 Campaign Remastered | reads Battle.net CASC storage |
 | `s2` | Call of Duty: WWII | Signed zones |
 | `iw7` | Call of Duty: Infinite Warfare | |
+| `iw8` | Call of Duty: Modern Warfare (2019) | Version 1.20 only. Reads Battle.net CASC storage |
 
 ## First run
 
@@ -86,7 +87,7 @@ The assets go to `dump/mp_shipment/`, together with `mp_shipment.csv`, which lis
 
 Other dump commands:
 
-- `dumpmap <map>` dumps a map with all of the zones it loads, into `dump/<map>/` with one merged CSV. Use it when you port a map. It works for H1, H2 and S1. Add `--skip-common` to leave out the common zones, if you already have them in `zonetool_paths/`.
+- `dumpmap <map>` dumps a map with all of the zones it loads, into `dump/<map>/` with one merged CSV. Use it when you port a map. It works for H1, H2, IW6 and S1. Add `--skip-common` to leave out the common zones, if you already have them in `zonetool_paths/`.
 - `dumpasset <type> <name> <zone>` dumps one asset to `dump/assets/`. Use `*` as the name to dump all assets of that type, for example `dumpasset material * mp_shipment`.
 
 Useful dump options (put them before the command):
@@ -273,7 +274,7 @@ Type these in the console, or put them after `zonetool.exe` on the command line.
 | `verifyzone <zone>` | Reads every asset in the zone and checks that the whole zone is read correctly |
 | `verifyzone --all` | Verifies every zone |
 | `dumpzone <zone> [--target <game>]` | Dumps the zone to `dump/<zone>/`. `--target` converts the assets |
-| `dumpmap <map> [--target <game>] [--skip-common]` | Dumps the map and the zones it loads to `dump/<map>/`, with one merged CSV. H1, H2 and S1 only |
+| `dumpmap <map> [--target <game>] [--skip-common]` | Dumps the map and the zones it loads to `dump/<map>/`, with one merged CSV. H1, H2, IW6 and S1 only |
 | `dumpasset <type> <name\|*> <zone> [--target <game>]` | Dumps one asset to `dump/assets/`. `*` dumps all assets of the type |
 | `listzone <zone>` | Writes the asset list of the zone to `asset_listing/<game>/<zone>.zone`, without dumping assets |
 | `listzone --all` | Writes the asset list of every zone |
@@ -292,7 +293,7 @@ Options change how x64-zt runs. Put them on the `zonetool.exe` command line, **b
 
 | Option | Use | Effect |
 | --- | --- | --- |
-| `-game <name>` | All | Selects the game: `iw6`, `s1`, `h1`, `h2`, `s2` or `iw7` |
+| `-game <name>` | All | Selects the game: `iw6`, `s1`, `h1`, `h2`, `s2`, `iw7` or `iw8` |
 | `-path <folder>` | All | Selects the game folder, the folder that holds `zone/` |
 | `-target_path <folder>` | All | Selects the game folder of the `--target` game |
 | `-no_cache` | All | Ignores the build cache and writes every file again |
@@ -301,6 +302,8 @@ Options change how x64-zt runs. Put them on the `zonetool.exe` command line, **b
 | `-castdump` | Dump | Writes a `.cast` file next to each model and animation. S2 only for now |
 | `-more_memory` | Build | Doubles the zone memory limit |
 | `-keep_mp_traverse_nodes` | Build | Keeps invalid multiplayer traverse nodes in aipaths. H2 only |
+| `-uncompressed` | Build | Writes a stored (uncompressed) zone. IW8 only. mw120rproxy needs it for custom weapons |
+| `-pbr` | Dump | Converts IW8 materials to the stock IW7 PBR techsets with `--target iw7`. Without it, x64-zt uses the lambert techsets |
 
 ## Game and folder selection
 
@@ -318,6 +321,7 @@ If you do not give `-game`, x64-zt selects the game in this order:
 | `MW2CR.exe`, `h2_sp64_bnet_ship.exe` | `h2` |
 | `s2_mp64_ship.exe` | `s2` |
 | `iw7_ship.exe` | `iw7` |
+| `game_dx12_ship_replay.exe` | `iw8` |
 
 If you do not give `-path`, x64-zt uses the folder of `zonetool.exe` when it has a `zone/` folder. If not, it uses the folder in `zonetool.json`, then the default Steam folder of the game.
 
@@ -366,22 +370,25 @@ When you run x64-zt from another folder, `dump/`, `zonetool/` and `zone_source/`
 
 Rows are the source game (the zone you dump). Columns are the target game (`--target`).
 
-| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 |
-| --- | :-: | :-: | :-: | :-: | :-: | :-: |
-| **IW6** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ |
-| **S1** | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ |
-| **H1** | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ |
-| **H2** | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ |
-| **S2** | ❌ | ❌ | ⚠️ | ❌ | ✅ | ❌ |
-| **IW7** | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ |
+| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 | IW8 |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **IW6** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **S1** | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| **H1** | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ | ❌ |
+| **H2** | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| **S2** | ❌ | ❌ | ⚠️ | ❌ | ✅ | ❌ | ❌ |
+| **IW7** | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ |
+| **IW8** | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ |
 
 ✅ supported · ⚠️ partial or experimental · ❌ not supported
 
-- **IW6 → H1** keeps the IW6 techsets instead of remapping them.
+- **IW6 → H1** and **H1 -> S2** will convert shaders/techsets natively from these two games.
 - **S1 → H2** converts through H1.
-- **H1 → S1** is left out on purpose for now.
+- **H1 → S1** is left out due to backporting issues, and may be added again in the future. The `v1` branch contains it.
 - **IW7 → H1** converts images, materials and models only.
-- **H1 → S2** and **S1 → S2** are experimental. They convert map assets (world, collision, map ents), models, materials and images. Effects, sounds, animations, scriptables and weapons are not converted yet.
+- **IW7 → IW8** is experimental. Materials use a stock IW8 shader for now, and attachments and muzzle effects are not converted. See [Weapon Porting (IW7 -> IW8)](iw7-to-iw8-weapon).
+- **IW8 → IW7** is experimental. It only does world geometry, collision, static models, models, materials, images and the vision file. It was built around `mp_rust`, which loads and plays in IW7-Mod, but some materials, models and effects are still dropped, so lighting and detail do not match IW8. Add `-pbr` to use the stock IW7 PBR techsets.
+- **H1 → S2** and **S1 → S2** are experimental, but work way better as of **November 15th, 2026**. 
 
 ## Asset listings
 
@@ -402,6 +409,7 @@ Extract the `.zip` with a tool like 7-Zip or WinRAR. To search all of the files 
 
 - [Port maps from CoD4, MW2 or MW3](map-porting-iw5) to the next-generation games.
 - [Port maps between AW, MWR and MW2CR](map-porting-s1).
+- [Port weapons from IW7 to IW8](iw7-to-iw8-weapon).
 - [Zonetool Extra](zonetool-extra): `override/`, custom LUI and other fixes.
 
 ### Fully custom assets

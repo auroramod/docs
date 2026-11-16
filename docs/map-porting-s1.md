@@ -1,4 +1,4 @@
-# Map Porting (between AW, MWR, MW2:CR)
+# Map Porting (between IW6, IW7, S1, S2, H1, H2)
 
 :::tip
 Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).

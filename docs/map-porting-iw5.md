@@ -1,13 +1,13 @@
-# Map Porting (COD4/MW2/MW3 -> MWR/S1/MW2:CR)
+# Map Porting (IW3/IW4/IW5 -> IW6/S1/S2/H1/H2)
 
 :::tip
-Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about here. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
 :::
 
-To port maps from IW3, IW4, or IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/x64) on the **x64** branch from GitHub. This version of **zonetool** will convert assets from older games to the Ghost-engine games like IW6, S1, H1, or H2. When the converted assets are dumped with older zonetool, you use **x64-zt** for building these converted assets for your game of choice.
+To port maps from IW3-IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/x64) on the **x64** branch from GitHub. This specific DLL will convert older games to the post-Ghost (IW6) games. When the converted assets are dumped with Joelrau's zonetool DLL, you must use **x64-zt** to build them.
 
 :::warning
-Due to massive engine changes with lighting and such done from *Modern Warfare 3* to *Ghosts*, maps ported from games before Ghosts don't take full advantage of H1 technology and may not look the best. Multiple patches and conversions are done to the game to restore this data when possible. This **may include fullbright models** which has a solution below.
+Due to massive engine changes from *Modern Warfare 3* -> *Ghosts*, maps from games before Ghosts don't take full advantage of the technology, and may not look the best. Patches and conversions are done to improve this data when possible.
 :::
 
 To start the map porting process, you'll need:
