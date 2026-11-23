@@ -1,7 +1,7 @@
 # Map Porting (between IW6, IW7, S1, S2, H1, H2)
 
 :::tip
-Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+Doing a quick read of the [Zonetool Basics](x64-zt) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](x64-zt#commands) and to check whether [you can port from your desired game to the new one](x64-zt#game-conversion-support).
 :::
 
 To port maps between the next-generation games, use [x64-zt](https://github.com/Joelrau/x64-zt). You can [download it here](https://github.com/Joelrau/x64-zt/releases/tag/latest).
@@ -37,7 +37,7 @@ First, find the zone of the map you want to port. Look in the source game's `zon
 The map is now at `<MWR folder>/zone/mp_greenband.ff`.
 
 :::tip
-To keep one copy of `zonetool.exe`, save the folder of each game in `zonetool.json` and select the game with `-game`. See [Running from another folder](zonetool-basics#running-from-another-folder).
+To keep one copy of `zonetool.exe`, save the folder of each game in `zonetool.json` and select the game with `-game`. See [Running from another folder](x64-zt#running-from-another-folder).
 :::
 
 ### Extra steps

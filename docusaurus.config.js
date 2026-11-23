@@ -18,6 +18,18 @@ const config = {
   //deploymentBranch: 'publish',
   trailingSlash: 'false',
 
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          { from: '/zonetool-basics', to: '/x64-zt' },
+          { from: '/zonetool', to: '/x64-zt' },
+        ],
+      },
+    ],
+  ],
+
   presets: [
     [
       '@docusaurus/preset-classic',

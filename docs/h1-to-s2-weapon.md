@@ -6,7 +6,7 @@ H1 -> S2 weapon porting is **experimental**. The AK-47 converts, builds, shows u
 
 This guide takes a weapon from **Call of Duty: Modern Warfare Remastered (H1)** and puts it in **Call of Duty: WWII (S2)**. We use the AK-47 (`h1_ak47_mp`) as the example. The same steps work for any other multiplayer weapon.
 
-New to x64-zt? Read [Zonetool Basics](zonetool-basics) first. It explains the folders used below.
+New to x64-zt? Read [Zonetool Basics](x64-zt) first. It explains the folders used below.
 
 ## What you need
 

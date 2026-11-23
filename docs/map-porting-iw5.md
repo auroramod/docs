@@ -1,7 +1,7 @@
 # Map Porting (IW3/IW4/IW5 -> IW6/S1/S2/H1/H2)
 
 :::tip
-Doing a quick read of the [Zonetool Basics](zonetool-basics) will explain **many things** that are talked about here. We recommend checking the [x64-zt commands](zonetool-basics#commands) and to check whether [you can port from your desired game to the new one](zonetool-basics#game-conversion-support).
+Doing a quick read of the [Zonetool Basics](x64-zt) will explain **many things** that are talked about here. We recommend checking the [x64-zt commands](x64-zt#commands) and to check whether [you can port from your desired game to the new one](x64-zt#game-conversion-support).
 :::
 
 To port maps from IW3-IW5, you must use [Joelrau's zonetool DLL](https://github.com/Joelrau/zonetool/tree/x64) on the **x64** branch from GitHub. This specific DLL will convert older games to the post-Ghost (IW6) games. When the converted assets are dumped with Joelrau's zonetool DLL, you must use **x64-zt** to build them.

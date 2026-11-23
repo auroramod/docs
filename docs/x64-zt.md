@@ -1,4 +1,4 @@
-# Zonetool Basics
+# x64-zt
 
 :::warning
 x64-zt is still in development, and some parts of the modding process are not documented yet. If you get stuck, [you can join our Discord](http://auroramod.dev/discord) and ask or look around.
@@ -6,34 +6,40 @@ x64-zt is still in development, and some parts of the modding process are not do
 
 ## What is x64-zt?
 
-x64-zt is a standalone command-line tool that reads and writes "Fast File" zones for the next-generation Call of Duty games. x64-zt supports:
-
-- **Dumping** a zone: write its assets to disk as files you can read and edit.
-- **Building** a zone: pack your own asset files into a new `.ff` the game can load.
-- **Converting** assets from one game to another via dumping.
+x64-zt is a standalone command-line tool that reads and writes "Fast File" zones for the next-generation Call of Duty games. x64-zt supports dumping (unlinking), building (linking), and conversions of assets to other games.
 
 [Download x64-zt from GitHub](https://github.com/Joelrau/x64-zt/releases/tag/latest).
 
 ### Supported games
 
-Each game has a codename for the studio and its game number. For example, Ghosts is **IW6**, Infinity Ward's 6th game. **S1** (Sledgehammer's 1st game Advanced Warfare) and **H1** (Halfmoon's 1st game Modern Warfare Remastered) are the first games of their teams. Use the codename everywhere x64-zt asks for a game.
+Each game has a codename for the studio and its game number. For example, Ghosts is **Iw6**, Infinity Ward's 6th game. **S1** (Sledgehammer's 1st game Advanced Warfare) and **H1** (Halfmoon's 1st game Modern Warfare Remastered) are the first games of their teams. Use the codename everywhere x64-zt asks for a game.
 
-| Codename | Game | Notes |
-| --- | --- | --- |
-| `iw6` | Call of Duty: Ghosts | |
-| `s1` | Call of Duty: Advanced Warfare | |
-| `h1` | Call of Duty: Modern Warfare Remastered | |
-| `h2` | Call of Duty: Modern Warfare 2 Campaign Remastered | reads Battle.net CASC storage |
-| `s2` | Call of Duty: WWII | Signed zones |
-| `iw7` | Call of Duty: Infinite Warfare | |
-| `iw8` | Call of Duty: Modern Warfare (2019) | Version 1.20 only. Reads Battle.net CASC storage |
+Rows are the source game (the game you dump). Columns are the target game to use with `--target`.
+
+:::warning
+The new x64-zt 2 has `IW3`, `IW4`, & `IW5` included. Joelrau/zonetool is no longer needed to port old generation Call of Duty games. Conversions like `H1` -> `S1` that used to work as experiments has been removed.
+:::
+
+| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 | IW8 |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **IW3** (Call of Duty 4) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ✅ | ❌ |
+| **IW4** (Modern Warfare 2) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ❌ |
+| **IW5** (Modern Warfare 3) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ❌ |
+| **IW6** (Ghosts) | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **S1** (Advanced Warfare) | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
+| **H1** (Modern Warfare Remastered) | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ | ❌ |
+| **H2** (Modern Warfare 2 Campaign Remastered) | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
+| **S2** (WWII) | ❌ | ❌ | ⚠️ | ❌ | ✅ | ❌ | ❌ |
+| **IW7** (Infinite Warfare) | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ |
+| **IW8** (Modern Warfare 2019) | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ |
+
+✅ supported · ⚠️ partial or experimental · 🚧 not in x64-zt yet (worked in Joelrau/zonetool, planned) · ❌ not supported
 
 ## First run
 
 1. Put `zonetool.exe` in your game folder, next to the game exe.
-2. Open a terminal (Command Prompt or PowerShell) in that folder.
-3. Run `zonetool.exe -h`. This prints every command and option, then exits.
-4. Run `zonetool.exe` with no command. This opens the **interactive console**, where you type commands one after another. Type `quit` to close it.
+2. Run `zonetool.exe -h`. This prints every command and option, then exits.
+3. Run `zonetool.exe` with no command. This opens the **interactive console**, where you type commands one after another. Type `quit` to close it.
 
 The first line of the console shows the game and the folder that x64-zt selected:
 
@@ -368,20 +374,10 @@ When you run x64-zt from another folder, `dump/`, `zonetool/` and `zone_source/`
 
 ## Game conversion support
 
-Rows are the source game (the zone you dump). Columns are the target game (`--target`).
+The full table is in [Supported games](#supported-games). Notes on specific conversions:
 
-| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 | IW8 |
-| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| **IW6** | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **S1** | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
-| **H1** | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ | ❌ |
-| **H2** | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| **S2** | ❌ | ❌ | ⚠️ | ❌ | ✅ | ❌ | ❌ |
-| **IW7** | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ |
-| **IW8** | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ |
-
-✅ supported · ⚠️ partial or experimental · ❌ not supported
-
+- **IW3 → IW7** converts through IW4 and IW5 internally. **IW4 → IW7** and **IW5 → IW7** are not offered on their own yet.
+- **IW3/IW4/IW5 → IW6/S1/H1/H2/S2** are not reimplemented in x64-zt yet. Until then, use the [old-gen map porting guide](map-porting-iw5).
 - **IW6 → H1** and **H1 -> S2** will convert shaders/techsets natively from these two games.
 - **S1 → H2** converts through H1.
 - **H1 → S1** is left out due to backporting issues, and may be added again in the future. The `v1` branch contains it.

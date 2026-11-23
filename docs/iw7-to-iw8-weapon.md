@@ -6,7 +6,7 @@ IW7 -> IW8 weapon porting is **experimental**. A converted weapon builds and ver
 
 This guide takes a weapon from **Call of Duty: Infinite Warfare (IW7)** and builds it as a custom weapon for **Call of Duty: Modern Warfare (2019), version 1.20.4 (IW8)**. We use the EMC pistol (`iw7_emc_mp`) as the example. You can swap in any multiplayer weapon.
 
-New to x64-zt? Read [Zonetool Basics](zonetool-basics) first. It takes a few minutes and explains the folders used below.
+New to x64-zt? Read [Zonetool Basics](x64-zt) first. It takes a few minutes and explains the folders used below.
 
 ## What you need
 
