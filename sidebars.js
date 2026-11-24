@@ -97,9 +97,11 @@ const sidebars = {
       label: '👾 Zonetool',
       collapsible: true,
       items: [
-        'zonetool-basics',
+        'x64-zt',
         'map-porting-iw5',
         'map-porting-s1',
+        'iw7-to-iw8-weapon',
+        'h1-to-s2-weapon',
         'zonetool-extra',
         'map-arena-files'
       ]
