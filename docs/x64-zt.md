@@ -322,7 +322,7 @@ Options change how x64-zt runs. Put them on the `zonetool.exe` command line, **b
 
 If you do not give `-game`, x64-zt selects the game in this order:
 
-1. The game exe in the `-path` folder, or in the folder of `zonetool.exe`.
+1. The game exe in the `-path` folder. Without `-path`, the game exe in the folder of `zonetool.exe` or in the current folder.
 2. The `game` value in `zonetool.json`.
 3. The first game in the build.
 
@@ -334,9 +334,9 @@ If you do not give `-game`, x64-zt selects the game in this order:
 | `MW2CR.exe`, `h2_sp64_bnet_ship.exe` | `h2` |
 | `s2_mp64_ship.exe` | `s2` |
 | `iw7_ship.exe` | `iw7` |
-| `game_dx12_ship_replay.exe` | `iw8` |
+| `game_dx12_ship_replay.exe`, `ModernWarfare.exe` | `iw8` |
 
-If you do not give `-path`, x64-zt uses the folder of `zonetool.exe` when it has a `zone/` folder. If not, it uses the folder in `zonetool.json`, then the default Steam folder of the game.
+If you do not give `-path`, x64-zt uses the folder in `zonetool.json`. If not, it uses the folder of `zonetool.exe` or the current folder when it has the game exe or a `zone/` folder, then the default Steam folder of the game.
 
 ### Running from another folder
 
@@ -405,6 +405,7 @@ You can make your own with `listzone --all`, or download one:
 - [MW2 Campaign Remastered (H2)](/assets/listing/h2_asset_listing.zip)
 - [WWII (S2)](/assets/listing/s2_asset_listing.zip)
 - [Infinite Warfare (IW7)](/assets/listing/iw7_asset_listing.zip)
+- [Modern Warfare 2019 (IW8 1.20)](/assets/listing/iw8_asset_listing.zip)
 
 Extract the `.zip` with a tool like 7-Zip or WinRAR. To search all of the files at once, open the folder in [VSCode](https://code.visualstudio.com/) and use **Find in Files** (`Ctrl+Shift+F`).
 
