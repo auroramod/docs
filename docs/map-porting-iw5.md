@@ -11,7 +11,7 @@ Due to massive engine changes from *Modern Warfare 3* -> *Ghosts*, maps from gam
 :::
 
 To start the map porting process, you'll need:
-- [x64-zt](https://github.com/Joelrau/x64-zt/releases/tag/latest) (`zonetool.exe`), which goes in the folder of the game you port to
+- [x64-zt](https://github.com/auroramod/x64-zt/releases/tag/develop-latest) (`zonetool.exe`), which goes in the folder of the game you port to
 - the [zonetool .dll](https://github.com/Joelrau/zonetool/tree/x64) from **Joelrau** compiled, which dumps old game's assets in a format for x64-zt to build *(targets H1)*
 
 Once you find the zone you want to dump *(example: mp_bog from IW3)*, use the `dumpzone mp_bog <game?>` command and wait for your zone to dump. *(The `<game?>` part can be **IW6**, **S1**, **H1**, or **H2**, and this will dump your map for another game)*

@@ -10,7 +10,7 @@ New to x64-zt? Read [Zonetool Basics](x64-zt) first. It takes a few minutes and 
 
 ## What you need
 
-- **x64-zt 2** (`zonetool.exe`) from the [releases page](https://github.com/Joelrau/x64-zt/releases/tag/latest).
+- **x64-zt 2** (`zonetool.exe`) from the [releases page](https://github.com/auroramod/x64-zt/releases/tag/develop-latest).
 - **Infinite Warfare**
 - **Modern Warfare 2019 1.20** (currently only supports `game_dx12_ship_replay.exe` and the `Data/` folder)
 

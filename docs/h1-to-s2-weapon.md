@@ -10,7 +10,7 @@ New to x64-zt? Read [Zonetool Basics](x64-zt) first. It explains the folders use
 
 ## What you need
 
-- **x64-zt 2** (`zonetool.exe`), from the [releases page](https://github.com/Joelrau/x64-zt/releases/tag/latest).
+- **x64-zt 2** (`zonetool.exe`), from the [releases page](https://github.com/auroramod/x64-zt/releases/tag/develop-latest).
 - **Modern Warfare Remastered 1.15**, the folder with `h1_mp64_ship.exe`.
 - **Call of Duty: WWII** on Steam, the folder with `s2_mp64_ship.exe`.
 - **[S2x](https://github.com/Brentdevent/S2x)**, the WWII client mod. It supports `loadzone` and loading mods just like H1-Mod and IW7-Mod do.

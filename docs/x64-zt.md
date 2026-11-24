@@ -8,7 +8,7 @@ x64-zt is still in development, and some parts of the modding process are not do
 
 x64-zt is a standalone command-line tool that reads and writes "Fast File" zones for the next-generation Call of Duty games. x64-zt supports dumping (unlinking), building (linking), and conversions of assets to other games.
 
-[Download x64-zt from GitHub](https://github.com/Joelrau/x64-zt/releases/tag/latest).
+[Download the x64-zt 2 pre-release from GitHub](https://github.com/auroramod/x64-zt/releases/tag/develop-latest).
 
 ### Supported games
 
@@ -33,7 +33,14 @@ The new x64-zt 2 has `IW3`, `IW4`, & `IW5` included. Joelrau/zonetool is no long
 | **IW7** (Infinite Warfare) | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ |
 | **IW8** (Modern Warfare 2019) | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ |
 
-✅ supported · ⚠️ partial or experimental · 🚧 not in x64-zt yet (worked in Joelrau/zonetool, planned) · ❌ not supported
+| | Status | Meaning |
+| :-: | --- | --- |
+| ✅ | **Supported** | Works for the assets of this game pair |
+| ⚠️ | **Partial** | Experimental or unfinished (some assets work, weapons may work) |
+| 🚧 | **Planned** | x86 games from Joelrau/zonetool for dumping only |
+| ❌ | **Not supported** | No conversion |
+
+See [Game conversion support](#game-conversion-support) for notes on each conversion.
 
 ## First run
 
@@ -309,7 +316,7 @@ Options change how x64-zt runs. Put them on the `zonetool.exe` command line, **b
 | `-more_memory` | Build | Doubles the zone memory limit |
 | `-keep_mp_traverse_nodes` | Build | Keeps invalid multiplayer traverse nodes in aipaths. H2 only |
 | `-uncompressed` | Build | Writes a stored (uncompressed) zone. IW8 only. mw120rproxy needs it for custom weapons |
-| `-pbr` | Dump | Converts IW8 materials to the stock IW7 PBR techsets with `--target iw7`. Without it, x64-zt uses the lambert techsets |
+| `-lambert` | Dump | Converts IW8 materials to the stock IW7 lambert techsets with `--target iw7`. Without it, x64-zt uses the PBR techsets |
 
 ## Game and folder selection
 
@@ -376,15 +383,15 @@ When you run x64-zt from another folder, `dump/`, `zonetool/` and `zone_source/`
 
 The full table is in [Supported games](#supported-games). Notes on specific conversions:
 
-- **IW3 → IW7** converts through IW4 and IW5 internally. **IW4 → IW7** and **IW5 → IW7** are not offered on their own yet.
-- **IW3/IW4/IW5 → IW6/S1/H1/H2/S2** are not reimplemented in x64-zt yet. Until then, use the [old-gen map porting guide](map-porting-iw5).
-- **IW6 → H1** and **H1 -> S2** will convert shaders/techsets natively from these two games.
-- **S1 → H2** converts through H1.
-- **H1 → S1** is left out due to backporting issues, and may be added again in the future. The `v1` branch contains it.
-- **IW7 → H1** converts images, materials and models only.
-- **IW7 → IW8** is experimental. Materials use a stock IW8 shader for now, and attachments and muzzle effects are not converted. See [Weapon Porting (IW7 -> IW8)](iw7-to-iw8-weapon).
-- **IW8 → IW7** is experimental. It only does world geometry, collision, static models, models, materials, images and the vision file. It was built around `mp_rust`, which loads and plays in IW7-Mod, but some materials, models and effects are still dropped, so lighting and detail do not match IW8. Add `-pbr` to use the stock IW7 PBR techsets.
-- **H1 → S2** and **S1 → S2** are experimental, but work way better as of **November 15th, 2026**. 
+- The pipeline is built to do `IW3 → IW4 → IW5` or `IW4 → IW5`, as IW5 is an extremely studied source game that is proven to work *(but we plan to make this better in the future)*. `IW3 → IW7` uses this chain. `IW4 → IW7` and `IW5 → IW7` are not offered on their own yet.
+- `IW3/IW4/IW5 → IW6/S1/H1/H2/S2` are not reimplemented in x64-zt yet. Until then, use the [old-gen map porting guide](map-porting-iw5).
+- H1 is the hub. `S1 → H2` converts through H1, and `S1 → S2` is possible by doing `S1 → H1`, and then `H1 → S2`. A build of x64-zt needs H1 for these.
+- `IW6 → H1` and `H1 → S2` convert techsets and shaders natively.
+- `H1 → S2` and `S1 → S2` are experimental, but work way better as of **November 15th, 2026**.
+- `H1 → S1` is left out due to backporting issues, and may be added again in the future. The legacy code on `main` contains it.
+- `IW7 → H1` converts images, materials and models only.
+- `IW7 → IW8` is experimental. Attachments and muzzle effects are not converted yet. See [Weapon Porting (IW7 → IW8)](iw7-to-iw8-weapon).
+- `IW8 → IW7` is experimental for backporting *([read issue #317](https://github.com/auroramod/x64-zt/issues/317))*. It converts world geometry, collision, static models, models, materials, images and the vision file. Some materials, models and effects are still dropped. Add `-lambert` to use the stock IW7 lambert techsets instead of the PBR techsets.
 
 ## Asset listings
 

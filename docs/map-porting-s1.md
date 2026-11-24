@@ -4,7 +4,7 @@
 Doing a quick read of the [Zonetool Basics](x64-zt) will explain **many things** that are talked about on this guide. We recommend checking the [x64-zt commands](x64-zt#commands) and to check whether [you can port from your desired game to the new one](x64-zt#game-conversion-support).
 :::
 
-To port maps between the next-generation games, use [x64-zt](https://github.com/Joelrau/x64-zt). You can [download it here](https://github.com/Joelrau/x64-zt/releases/tag/latest).
+To port maps between the next-generation games, use [x64-zt](https://github.com/auroramod/x64-zt). You can [download it here](https://github.com/auroramod/x64-zt/releases/tag/develop-latest).
 
 First, find the zone of the map you want to port. Look in the source game's `zone/` folder for the map name. This guide ports **Greenband** from AW (S1) to MWR (H1). Its zone is `mp_greenband`.
 
