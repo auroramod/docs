@@ -20,25 +20,31 @@ Rows are the source game (the game you dump). Columns are the target game to use
 The new x64-zt 2 has `IW3`, `IW4`, & `IW5` included. Joelrau/zonetool is no longer needed to port old generation Call of Duty games. Conversions like `H1` -> `S1` that used to work as experiments has been removed.
 :::
 
-| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 | IW8 |
-| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
-| **IW3** (Call of Duty 4) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ✅ | ❌ |
-| **IW4** (Modern Warfare 2) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ❌ |
-| **IW5** (Modern Warfare 3) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ❌ |
-| **IW6** (Ghosts) | ✅ | ❌ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| **S1** (Advanced Warfare) | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ |
-| **H1** (Modern Warfare Remastered) | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ | ❌ |
-| **H2** (Modern Warfare 2 Campaign Remastered) | ❌ | ❌ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| **S2** (WWII) | ❌ | ❌ | ⚠️ | ❌ | ✅ | ❌ | ❌ |
-| **IW7** (Infinite Warfare) | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ |
-| **IW8** (Modern Warfare 2019) | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ |
+| From ↓ / To → | IW6 | S1 | H1 | H2 | S2 | IW7 | IW8 | T9 | S4 |
+| --- | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: | :-: |
+| **IW3** (Call of Duty 4) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ✅ | ❔ | ❌ | ❌ |
+| **IW4** (Modern Warfare 2) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ❔ | ❌ | ❌ |
+| **IW5** (Modern Warfare 3) | 🚧 | 🚧 | 🚧 | 🚧 | 🚧 | ⚠️ | ❔ | ❌ | ❌ |
+| **IW6** (Ghosts) | ✅ | ❌ | ✅ | ❔ | ❔ | ❌ | ❌ | ❌ | ❌ |
+| **S1** (Advanced Warfare) | ❌ | ✅ | ✅ | ✅ | ⚠️ | ❌ | ❌ | ❌ | ❌ |
+| **H1** (Modern Warfare Remastered) | ❌ | ❌ | ✅ | ✅ | ⚠️ | ⚠️ | ❌ | ❌ | ❌ |
+| **H2** (Modern Warfare 2 Campaign Remastered) | ❌ | ❌ | ✅ | ✅ | ❔ | ❌ | ❌ | ❌ | ❌ |
+| **S2** (WWII) | ❌ | ❌ | ⚠️ | ❔ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| **IW7** (Infinite Warfare) | ❌ | ❌ | ⚠️ | ❌ | ❌ | ✅ | ⚠️ | ❌ | ❌ |
+| **IW8** (Modern Warfare 2019) | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ✅ | ❌ | ❌ |
+| **T9** (Black Ops Cold War) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | 🧪 | 🧪 | ❌ |
+| **S4** (Vanguard) | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ | ⚠️ | ❌ | ✅ |
 
 | | Status | Meaning |
 | :-: | --- | --- |
 | ✅ | **Supported** | Works for the assets of this game pair |
-| ⚠️ | **Partial** | Experimental or unfinished (some assets work, weapons may work) |
+| ⚠️ | **Partial** | Unfinished (some assets may work, like weapons) |
+| 🧪 | **Experimental** | Broken or incorrect outputs |
+| ❔ | **Possible** | Can be done with a chain of conversions (like `IW5 → IW7 → IW8`) |
 | 🚧 | **Planned** | x86 games from Joelrau/zonetool for dumping only |
 | ❌ | **Not supported** | No conversion |
+
+IW3 and IW5 are for dumping only. x64-zt cannot build zones for them. T9 is experimental.
 
 See [Game conversion support](#game-conversion-support) for notes on each conversion.
 
@@ -54,7 +60,7 @@ The first line of the console shows the game and the folder that x64-zt selected
 zonetool [h1] C:\Program Files (x86)\Steam\steamapps\common\Call of Duty Modern Warfare Remastered
 ```
 
-If the game or the folder is wrong, see [Game and folder selection](#game-and-folder-selection).
+If the game or the folder is wrong, see [Game and folder selection](#game-and-folder-selection). If x64-zt does not find a game at all, it prints the setup steps and the games in your build, then waits for you to press Enter.
 
 You can also run one command and exit, without the console:
 
@@ -107,7 +113,7 @@ Useful dump options (put them before the command):
 
 - `-dds` writes images as `.dds` files too, so you can open them in an image editor.
 - `-dump_streamed_image` also reads the `imagefile*.pak` files and writes the high-resolution streamed images.
-- `-castdump` writes a `.cast` file next to each model and animation, which you can import into Blender or Maya with [Cast](https://github.com/dtzxporter/cast). S2 only for now.
+- `-castdump` writes a `.cast` file next to each model and animation, which you can import into Blender or Maya with [Cast](https://github.com/dtzxporter/cast). It works for IW6, S1, H1, H2, S2, IW7 and T9.
 
 ```bash
 zonetool.exe -dds -dump_streamed_image dumpzone mp_shipment
@@ -140,7 +146,7 @@ See [Game conversion support](#game-conversion-support) for the conversions that
    zonetool.exe buildzone my_mod
    ```
 
-The result is `zone/my_mod.ff`.
+The result is `zone/my_mod.ff`. Add `-use_usermaps` to write it to `usermaps/my_mod/` instead, or `-copy_to <folder>` to also copy the `.ff` and `.pak` files to another folder.
 
 :::danger
 `buildzone` replaces a zone that has the same name. If you build `mp_shipment`, your build overwrites the stock `zone/mp_shipment.ff`. Back up the stock zone first, or give your zone a new name.
@@ -282,7 +288,7 @@ Type these in the console, or put them after `zonetool.exe` on the command line.
 
 | Command | Result |
 | --- | --- |
-| `inspect <zone>` | Shows the fastfile header: version, signature, stream files, block sizes and asset count |
+| `inspect <zone>` | Shows the fastfile header and container data: version, signature, stream files, block sizes and asset count |
 | `inspect --all` | Reads the header of every zone and reports the zones that fail |
 | `verifyzone <zone>` | Reads every asset in the zone and checks that the whole zone is read correctly |
 | `verifyzone --all` | Verifies every zone |
@@ -291,7 +297,8 @@ Type these in the console, or put them after `zonetool.exe` on the command line.
 | `dumpasset <type> <name\|*> <zone> [--target <game>]` | Dumps one asset to `dump/assets/`. `*` dumps all assets of the type |
 | `listzone <zone>` | Writes the asset list of the zone to `asset_listing/<game>/<zone>.zone`, without dumping assets |
 | `listzone --all` | Writes the asset list of every zone |
-| `buildzone <zone>` | Builds `zone/<zone>.ff` from `zone_source/<zone>.csv` and `zonetool/<zone>/` |
+| `listzones` | Prints the name of every zone in the game, one per line |
+| `buildzone <zone>` | Builds `zone/<zone>.ff` from `zone_source/<zone>.csv` and `zonetool/<zone>/`. Not for IW3 and IW5 |
 | `generatecsv <map> [sp] [--path <folder>]` | Writes `zone_source/<map>.csv` from the files in `zonetool/<map>/` |
 | `help` | Prints the help |
 | `quit` | Closes the console |
@@ -306,17 +313,22 @@ Options change how x64-zt runs. Put them on the `zonetool.exe` command line, **b
 
 | Option | Use | Effect |
 | --- | --- | --- |
-| `-game <name>` | All | Selects the game: `iw6`, `s1`, `h1`, `h2`, `s2`, `iw7` or `iw8` |
+| `-game <name>` | All | Selects the game: `iw3`, `iw5`, `iw6`, `s1`, `h1`, `h2`, `s2`, `iw7`, `iw8`, `t9` or `s4` |
 | `-path <folder>` | All | Selects the game folder, the folder that holds `zone/` |
 | `-target_path <folder>` | All | Selects the game folder of the `--target` game |
 | `-no_cache` | All | Ignores the build cache and writes every file again |
+| `-threads <n>` | All | Limits the number of worker threads |
 | `-dds` | Dump | Writes images as `.dds` files too |
 | `-dump_streamed_image` | Dump | Reads `imagefile*.pak` and writes the streamed images |
-| `-castdump` | Dump | Writes a `.cast` file next to each model and animation. S2 only for now |
+| `-castdump` | Dump | Writes a `.cast` file next to each model and animation. IW6, S1, H1, H2, S2, IW7 and T9 |
+| `-lambert` | Dump | Converts IW8 materials to the stock IW7 lambert techsets with `--target iw7`. Without it, x64-zt uses the PBR techsets |
+| `-max_image_size <n>` | Dump | Limits images to `<n>` pixels on the longest side. IW7 → IW8 |
+| `-no_gpu` | Dump | Compresses BC6H and BC7 images on the CPU instead of the GPU. IW7 → IW8 |
+| `-use_usermaps` | Build | Writes the zone to `usermaps/<zone>/` instead of `zone/` |
+| `-copy_to <folder>` | Build | Copies the built `.ff` and `.pak` files to this folder |
 | `-more_memory` | Build | Doubles the zone memory limit |
 | `-keep_mp_traverse_nodes` | Build | Keeps invalid multiplayer traverse nodes in aipaths. H2 only |
 | `-uncompressed` | Build | Writes a stored (uncompressed) zone. IW8 only. mw120rproxy needs it for custom weapons |
-| `-lambert` | Dump | Converts IW8 materials to the stock IW7 lambert techsets with `--target iw7`. Without it, x64-zt uses the PBR techsets |
 
 ## Game and folder selection
 
@@ -328,6 +340,8 @@ If you do not give `-game`, x64-zt selects the game in this order:
 
 | Game exe | Game |
 | --- | --- |
+| `iw3mp.exe`, `iw3sp.exe` | `iw3` |
+| `iw5mp.exe`, `iw5sp.exe` | `iw5` |
 | `iw6mp64_ship.exe`, `iw6sp64_ship.exe` | `iw6` |
 | `s1_mp64_ship.exe`, `s1_sp64_ship.exe` | `s1` |
 | `h1_mp64_ship.exe`, `h1_sp64_ship.exe` | `h1` |
@@ -335,6 +349,8 @@ If you do not give `-game`, x64-zt selects the game in this order:
 | `s2_mp64_ship.exe` | `s2` |
 | `iw7_ship.exe` | `iw7` |
 | `game_dx12_ship_replay.exe`, `ModernWarfare.exe` | `iw8` |
+| `BlackOpsColdWar.exe` | `t9` |
+| `Vanguard.exe` | `s4` |
 
 If you do not give `-path`, x64-zt uses the folder in `zonetool.json`. If not, it uses the folder of `zonetool.exe` or the current folder when it has the game exe or a `zone/` folder, then the default Steam folder of the game.
 
@@ -371,7 +387,9 @@ When you run x64-zt from another folder, `dump/`, `zonetool/` and `zone_source/`
 | --- | --- |
 | `game "x" is not in this build` | Your copy of x64-zt does not include that game. Use a game listed in `zonetool.exe -h` |
 | `zone "x" not found in ...` | The zone is not in the game folder. Check the zone name and `-path` |
-| `set the <game> game folder with -path or zonetool.json` | x64-zt did not find the game folder. Give it with `-path` or in `zonetool.json` |
+| `x64-zt did not find the <game> game folder` | Give the game folder with `-path` or in `zonetool.json` |
+| `set the <game> game folder with -target_path or zonetool.json` | x64-zt did not find the `--target` game folder. Give it with `-target_path` or in `zonetool.json` |
+| `buildzone is not supported for <game>` | IW3 and IW5 are for dumping only |
 | `no converter from <game> to <game> in this build` | That conversion is not supported, or not in your copy. See [Game conversion support](#game-conversion-support) |
 | `dumpmap is not supported for <game>` | Use `dumpzone` on each map zone instead |
 | `Could not find csv file "x" to build zone` | `zone_source/x.csv` is missing, or you run x64-zt from another folder |
@@ -383,7 +401,8 @@ When you run x64-zt from another folder, `dump/`, `zonetool/` and `zone_source/`
 
 The full table is in [Supported games](#supported-games). Notes on specific conversions:
 
-- The pipeline is built to do `IW3 → IW4 → IW5` or `IW4 → IW5`, as IW5 is an extremely studied source game that is proven to work *(but we plan to make this better in the future)*. `IW3 → IW7` uses this chain. `IW4 → IW7` and `IW5 → IW7` are not offered on their own yet.
+- The pipeline is built to do `IW3 → IW4 → IW5` or `IW4 → IW5`, as IW5 is an extremely studied source game that is proven to work *(but we plan to make this better in the future)*. `IW3 → IW7` uses this chain. `IW5 → IW7` is partial. `IW4 → IW7` is not offered on its own yet.
+- `IW3/IW4/IW5 → IW8` is possible by converting to IW7 first, then `IW7 → IW8`.
 - `IW3/IW4/IW5 → IW6/S1/H1/H2/S2` are not reimplemented in x64-zt yet. Until then, use the [old-gen map porting guide](map-porting-iw5).
 - H1 is the hub. `S1 → H2` converts through H1, and `S1 → S2` is possible by doing `S1 → H1`, and then `H1 → S2`. A build of x64-zt needs H1 for these.
 - `IW6 → H1` and `H1 → S2` convert techsets and shaders natively.
@@ -392,6 +411,8 @@ The full table is in [Supported games](#supported-games). Notes on specific conv
 - `IW7 → H1` converts images, materials and models only.
 - `IW7 → IW8` is experimental. Attachments and muzzle effects are not converted yet. See [Weapon Porting (IW7 → IW8)](iw7-to-iw8-weapon).
 - `IW8 → IW7` is experimental for backporting *([read issue #317](https://github.com/auroramod/x64-zt/issues/317))*. It converts world geometry, collision, static models, models, materials, images and the vision file. Some materials, models and effects are still dropped. Add `-lambert` to use the stock IW7 lambert techsets instead of the PBR techsets.
+- `S4 → IW8` is partial. S4 (Vanguard) can also dump and build its own zones.
+- T9 (Black Ops Cold War) support is experimental. `T9 → T9` and `T9 → IW8` give broken or incorrect outputs.
 
 ## Asset listings
 
