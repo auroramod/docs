@@ -427,6 +427,7 @@ You can make your own with `listzone --all`, or download one:
 - [WWII (S2)](/assets/listing/s2_asset_listing.zip)
 - [Infinite Warfare (IW7)](/assets/listing/iw7_asset_listing.zip)
 - [Modern Warfare 2019 (IW8 1.20)](/assets/listing/iw8_asset_listing.zip)
+- [Vanguard (S4 1.14)](/assets/listing/s4_asset_listing.zip)
 
 Extract the `.zip` with a tool like 7-Zip or WinRAR. To search all of the files at once, open the folder in [VSCode](https://code.visualstudio.com/) and use **Find in Files** (`Ctrl+Shift+F`).
 
